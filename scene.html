@@ -503,11 +503,15 @@
     <video class="cover bgv front" src="media/chaap-film.mp4" poster="media/chaap-first.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
     <video class="cover bgv" src="media/chaap-film.mp4" poster="media/chaap-loop.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
   </div>
-  <div class="look" data-look="beads" style="--bd: linear-gradient(180deg, #887e6c 2%, #8d7d6b 8%, #918374 12%, #898071 18%, #887e6e 22%, #807a6e 28%, #797669 32%, #706c5f 38%, #6a6659 42%, #5b5449 48%, #3c372a 52%, #131a18 58%, #0c0f0b 62%, #130d07 68%, #110a06 72%, #180f07 78%, #312727 82%, #58524d 88%, #736d6c 92%, #807a78 98%)"><!-- taste-skill-ignore: the photo\'s own wall, extended -->
-    <img class="photo" src="images/products/stitched-blouse-triple-beads-concept-w1600.webp" width="853" height="1280" alt="" decoding="async">
+  <div class="look" data-look="beads" style="--bd: #1a1210">
+    <img class="cover" src="media/beads-loop.jpg" width="1280" height="720" alt="" decoding="async">
+    <video class="cover bgv front" src="media/beads-film.mp4" poster="media/beads-first.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
+    <video class="cover bgv" src="media/beads-film.mp4" poster="media/beads-loop.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
   </div>
-  <div class="look" data-look="foil" style="--bd: linear-gradient(180deg, #857866 2%, #887766 8%, #8c7c6c 12%, #847a6e 18%, #837969 22%, #7e7669 28%, #777265 32%, #6e695d 38%, #696457 42%, #5b5547 48%, #413a2e 52%, #161f1a 58%, #0d130e 62%, #150f07 68%, #110a05 72%, #211205 78%, #382f2b 82%, #58514f 88%, #736a68 92%, #7e7775 98%)"><!-- taste-skill-ignore: the photo\'s own wall, extended -->
-    <img class="photo" src="images/products/stitched-blouse-fendy-chiffon-foil-print-w1600.webp" width="853" height="1280" alt="" decoding="async">
+  <div class="look" data-look="foil" style="--bd: #1a1210">
+    <img class="cover" src="media/foil-loop.jpg" width="1280" height="720" alt="" decoding="async">
+    <video class="cover bgv front" src="media/foil-film.mp4" poster="media/foil-first.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
+    <video class="cover bgv" src="media/foil-film.mp4" poster="media/foil-loop.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
   </div>
   <div class="look" data-look="jhadkan" style="--bd: linear-gradient(180deg, #908066 2%, #977f67 8%, #977e69 12%, #8f7d68 18%, #88745b 22%, #7f6e54 28%, #79694d 32%, #705a41 38%, #655238 42%, #5e492f 48%, #372718 52%, #060a08 58%, #040505 62%, #040403 68%, #020303 72%, #030203 78%, #5b4346 82%, #827174 88%, #91878b 92%, #988a8b 98%)"><!-- taste-skill-ignore: the photo\'s own wall, extended -->
     <img class="photo" src="images/products/stiched-blouse-multi-work-with-jhadkan-w1600.webp" width="960" height="1280" alt="" decoding="async">
@@ -1006,7 +1010,8 @@
       resume: function () { if (on) quietPlay(vids[front]); }
     };
   }
-  var films = { base: Film(layers.base, 6.96, 9.96), chaap: Film(layers.chaap, 5.79, 9.875) };
+  var films = { base: Film(layers.base, 6.96, 9.96), chaap: Film(layers.chaap, 5.79, 9.875),
+                beads: Film(layers.beads, 5.958, 9.958), foil: Film(layers.foil, 6.167, 9.917) };
   document.addEventListener('visibilitychange', function () {
     Object.keys(films).forEach(function (k) { if (document.hidden) films[k].pause(); else films[k].resume(); });
   });
