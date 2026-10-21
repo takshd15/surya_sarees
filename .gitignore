@@ -1,0 +1,8 @@
+# design-check screenshots, backups and working files
+.taste-skill/
+# raw generated clips (copies live in media/)
+gemini_generated_video_*.mp4
+# separate project, not part of the Surya site
+ltx-world-model/
+# editor settings
+.vscode/

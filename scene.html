@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Surya Sarees — Sarees, Lehengas &amp; Suits | Surat</title>
+<meta name="description" content="Retail and wholesale sarees, lehengas, and suits from Surat, Gujarat since 1988. Shop new arrivals or enquire for bulk wholesale.">
+<meta name="theme-color" content="#9c1220">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Surya Sarees, Surat: order on WhatsApp">
+<meta property="og:description" content="Retail and wholesale sarees from Surat since 1988. Browse the catalogue and order on WhatsApp.">
+<meta property="og:image" content="media/banarasi-loop.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23D6302A'/%3E%3Cpolygon points='32,6 38,18 50,14 46,26 58,32 46,38 50,50 38,46 32,58 26,46 14,50 18,38 6,32 18,26 14,14 26,18' fill='%23FFD54F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Carmine field: the red of the Banarasi, white ink, pale pink for the one action */
+    --carmine: #9c1220;
+    --carmine-deep: #8a101c;
+    --ink: #ffffff;
+    --muted: #f0b9bd;
+    --accent: #ffd9dc;
+    --accent-ink: #9c1220;
+    --night: #120706;
+
+    --face: "Clash Grotesk", "Helvetica Neue", Arial, sans-serif;
+
+    /* five sizes */
+    --step-small: clamp(0.875rem, 0.84rem + 0.12vw, 0.9375rem);
+    --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+    --step-lead: clamp(1.25rem, 1.1rem + 0.55vw, 1.5rem);
+    --step-display: clamp(3.5rem, 0.8rem + 6.6vw, 7rem);
+
+    --m: clamp(20px, 2.2vw, 32px);
+    --retake-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --retake-slow-ease: cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--carmine); }
+  body { font-family: var(--face); font-weight: 400; color: var(--ink); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
+  button { font-family: var(--face); color: inherit; }
+  ::selection { background: var(--accent); color: var(--accent-ink); }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+  /* ---------- stage + looks ---------- */
+  .stage { position: relative; isolation: isolate; width: 100%; height: 100vh; height: 100dvh; overflow: hidden; background: var(--carmine); } /* taste-skill-ignore: 100vh is only the fallback for dvh */
+  .look { position: absolute; inset: 0; z-index: 0; visibility: hidden; pointer-events: none; background: var(--bd); }
+  .look.is-visible { visibility: visible; }
+  .look.is-entering { visibility: visible; z-index: 1; }
+  .photo {
+    position: absolute; top: 0; left: 50%; height: 100%; width: auto; max-width: none; transform: translateX(-50%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 14%, #000 86%, transparent 100%); /* taste-skill-ignore: edge feather that melts the photo into its own wall */
+            mask-image: linear-gradient(90deg, transparent 0, #000 14%, #000 86%, transparent 100%); /* taste-skill-ignore */
+  }
+  .cover { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; filter: brightness(0.8) contrast(1.04); }
+  .look[data-look="chaap"] .cover { filter: brightness(0.7) contrast(1.05); }
+  .bgv { opacity: 0; transition: opacity 450ms linear; }
+  .bgv.front { opacity: 1; }
+  .look.is-entering .cover { transition: transform 1600ms var(--retake-ease); }
+  .look.from-top .cover, .look.from-bottom .cover { transform: scale(1.06); }
+  .look.dropped .cover { transform: none; }
+  /* the drape: the new saree falls into place top to bottom, and lifts back on Reset */
+  .look.is-entering { transition: clip-path 1150ms var(--retake-slow-ease); }
+  .look.is-entering .photo { transition: transform 1600ms var(--retake-ease); }
+  .look.from-top { clip-path: inset(0 0 100% 0); }
+  .look.from-bottom { clip-path: inset(100% 0 0 0); }
+  .look.from-top .photo, .look.from-bottom .photo { transform: translateX(-50%) scale(1.06); }
+  .look.dropped { clip-path: inset(0 0 0 0); }
+  .look.dropped .photo { transform: translateX(-50%) scale(1); }
+
+  /* neutral scrim so white type reads on the film, without text shadows */
+  .scrim {
+    position: absolute; inset: 0; z-index: 5; pointer-events: none;
+    background:
+      linear-gradient(180deg, rgb(12 5 4 / 0.42) 0, rgb(12 5 4 / 0) 22%), /* taste-skill-ignore: scrim under text on a photograph */
+      radial-gradient(62% 40% at 50% 52%, rgb(12 5 4 / 0.38), rgb(12 5 4 / 0) 72%); /* taste-skill-ignore */
+  }
+
+  /* the opening: a carmine curtain lifts like a drape to reveal the film */
+  .curtain { position: absolute; inset: 0; z-index: 15; background: var(--carmine); pointer-events: none; animation: curtain 900ms var(--retake-slow-ease) 80ms both; }
+  @keyframes curtain { from { clip-path: inset(0 0 0 0); visibility: visible; } to { clip-path: inset(0 0 100% 0); visibility: hidden; } }
+
+  /* ---------- hero copy ---------- */
+  .hero { position: absolute; inset: 0; z-index: 10; pointer-events: none; }
+  .hero h1 {
+    position: absolute; top: 33%; left: 50%; transform: translateX(-50%);
+    width: calc(100vw - 2 * var(--m));
+    font-size: var(--step-display); font-weight: 400; line-height: 0.95; letter-spacing: -0.035em;
+    white-space: nowrap; text-align: center;
+  }
+  .hero h1 span { display: inline-block; transition: opacity 900ms var(--retake-ease), filter 900ms var(--retake-ease), transform 900ms var(--retake-ease); }
+  .hero h1 span:nth-child(2) { transition-delay: 90ms; }
+  .hero h1 span:nth-child(3) { transition-delay: 180ms; }
+  .stage.title-hidden .hero h1 span { opacity: 0; filter: blur(12px); transform: translateY(-10px); }
+  .hero .copy {
+    position: absolute; top: calc(46.78% + 104px); left: 50%; transform: translateX(-50%);
+    width: min(46ch, calc(100vw - 2 * var(--m))); display: grid; text-align: center;
+    font-size: var(--step-body); line-height: 1.45; letter-spacing: 0;
+  }
+  .copy p { grid-area: 1 / 1; transition: opacity 600ms var(--retake-ease), filter 600ms var(--retake-ease); }
+  .copy .c-look { opacity: 0; filter: blur(8px); display: flex; flex-direction: column; align-items: center; gap: 18px; }
+  .stage.has-look .copy .c-base { opacity: 0; filter: blur(8px); }
+  .stage.has-look .copy .c-look { opacity: 1; filter: none; transition-delay: 300ms; }
+  .copy .ask {
+    pointer-events: auto; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 28px; border-radius: 999px;
+    background: var(--accent); color: var(--accent-ink); font-size: var(--step-small); font-weight: 500; text-decoration: none;
+    transition: background-color 300ms var(--retake-ease), color 300ms var(--retake-ease), transform 200ms var(--retake-ease);
+  }
+  .copy .ask:hover, .copy .ask:focus-visible { background: var(--ink); }
+  .copy .ask:active { transform: scale(0.97); }
+  .stage:not(.has-look) .copy .ask { visibility: hidden; }
+  .copy .c-base { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+  .copy .cta-cat { pointer-events: auto; display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 999px; background: #25d366; color: #08240f; font-size: var(--step-small); font-weight: 500; text-decoration: none; transition: background-color 300ms var(--retake-ease), transform 200ms var(--retake-ease); }
+  .copy .cta-cat:hover, .copy .cta-cat:focus-visible { background: var(--ink); }
+  .copy .cta-cat:active { transform: scale(0.97); }
+
+  /* ---------- controller: one quiet glass surface, no edges or bevels ---------- */
+  .controller { position: absolute; top: 46.78%; left: 50%; transform: translateX(-50%); width: min(880px, calc(100vw - 2 * var(--m))); height: 72px; z-index: 20; }
+  .glass { position: absolute; }
+  .track {
+    top: 4px; left: 0; width: 100%; height: 64px; border-radius: 999px;
+    background: rgb(18 7 6 / 0.34);
+    -webkit-backdrop-filter: blur(14px) saturate(120%); /* taste-skill-ignore: the brief's one glass control */
+            backdrop-filter: blur(14px) saturate(120%); /* taste-skill-ignore */
+    transition: left 980ms var(--retake-slow-ease), width 980ms var(--retake-slow-ease), opacity 400ms linear;
+  }
+  .capsule {
+    top: -1px; height: 72px; border-radius: 999px;
+    left: var(--cap-left, -5px); width: var(--cap-width, calc(20% + 5px));
+    background-color: rgb(255 255 255 / 0.16);
+    -webkit-backdrop-filter: blur(18px) saturate(125%); /* taste-skill-ignore */
+            backdrop-filter: blur(18px) saturate(125%); /* taste-skill-ignore */
+    transition: left 620ms var(--retake-ease), width 620ms var(--retake-ease), background-color 980ms var(--retake-slow-ease), opacity 300ms var(--retake-ease);
+    pointer-events: none;
+  }
+  .probe { position: absolute; top: -1px; height: 72px; left: calc(50% - 100px); width: 200px; visibility: hidden; pointer-events: none; }
+  .cells { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(5, 1fr); align-items: center; }
+  .cell {
+    display: flex; align-items: center; justify-content: center; height: 100%; padding: 0 14px;
+    font-size: var(--step-lead); font-weight: 400; line-height: 1.2; letter-spacing: -0.01em; white-space: nowrap;
+    transition: opacity 420ms var(--retake-ease), filter 420ms var(--retake-ease), transform 980ms var(--retake-slow-ease);
+  }
+  .cell-label { color: var(--muted); transition: opacity 300ms var(--retake-ease), filter 420ms var(--retake-ease), transform 980ms var(--retake-slow-ease); }
+  .controller.hl .cell-label { opacity: 0.5; }
+  button.cell { background: transparent; border: 0; border-radius: 999px; cursor: pointer; }
+  button.cell:disabled { cursor: default; }
+  .cell .face { display: grid; }
+  .cell .lbl, .cell .rst { grid-area: 1 / 1; transition: opacity 300ms var(--retake-ease), filter 300ms var(--retake-ease); }
+  .cell .rst { display: none; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+  /* the Reset word takes no space until it is needed, then reveals in place of the option name */
+  .cell.is-reset .lbl { display: none; }
+  .cell.is-reset .rst { display: block; animation: reveal 520ms var(--retake-ease) both; }
+  .controller.restoring .cell.is-chosen .lbl { animation: reveal 760ms var(--retake-ease) 60ms both; }
+  @keyframes reveal { from { opacity: 0; filter: blur(10px); } to { opacity: 1; filter: blur(0); } }
+
+  .controller.collapsed .capsule, .controller.restoring .capsule { transition: left 980ms var(--retake-slow-ease), width 980ms var(--retake-slow-ease), background-color 980ms var(--retake-slow-ease), opacity 300ms var(--retake-ease); }
+  .controller.collapsed .capsule { left: calc(50% - 100px); width: 200px; background-color: rgb(255 255 255 / 0.12); }
+  .controller.collapsed .track { left: calc(50% - 96px); width: 192px; }
+  .controller.rear-faded .track { opacity: 0; transition: left 980ms var(--retake-slow-ease), width 980ms var(--retake-slow-ease), opacity 400ms linear 650ms; }
+  .controller.collapsed .cell:not(.is-chosen) { opacity: 0; filter: blur(10px); transform: scale(0.94); pointer-events: none; }
+  .controller.restoring .cell:not(.is-chosen) { transition: opacity 760ms var(--retake-ease) 60ms, filter 760ms var(--retake-ease) 60ms, transform 980ms var(--retake-slow-ease); }
+
+  /* ---------- header: wordmark, two facts, one action ---------- */
+  header { position: absolute; top: 0; left: 0; width: 100%; z-index: 30; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: calc(var(--m) + env(safe-area-inset-top)) var(--m) var(--m); }
+  .logo { grid-column: 2; grid-row: 1; display: inline-flex; align-items: center; }
+  .logo img { height: 36px; width: auto; display: block; }
+  .meta { grid-column: 1; grid-row: 1; justify-self: start; padding-left: 22px; /* matches the button's inner padding, so both text edges sit level */ display: flex; align-items: center; gap: clamp(24px, 2.6vw, 40px); font-size: var(--step-small); line-height: 1.2; white-space: nowrap; }
+    .try {
+    grid-column: 3; grid-row: 1; justify-self: end;
+    position: relative; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 22px; border-radius: 999px;
+    background: var(--accent); color: var(--accent-ink); font-size: var(--step-small); font-weight: 500; text-decoration: none;
+    transition: color 300ms var(--retake-ease), background-color 300ms var(--retake-ease), transform 200ms var(--retake-ease);
+  }
+  .try:hover, .try:focus-visible { background: var(--ink); }
+  .try:active { transform: scale(0.97); }
+
+  .notice { position: absolute; left: 50%; bottom: calc(var(--m) + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 40; display: flex; align-items: center; gap: 16px; padding: 8px 8px 8px 22px; border-radius: 999px; background: var(--carmine-deep); font-size: var(--step-small); max-width: calc(100vw - 2 * var(--m)); }
+  .notice[hidden] { display: none; }
+  .notice button { min-height: 44px; padding: 0 20px; border-radius: 999px; border: 0; background: var(--accent); color: var(--accent-ink); font-size: var(--step-small); font-weight: 500; cursor: pointer; }
+  .notice button:hover, .notice button:focus-visible { background: var(--ink); }
+
+  /* ---------- entrance: each part arrives in turn as the curtain lifts ---------- */
+  @keyframes rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+  @keyframes rise-x { from { opacity: 0; transform: translate(-50%, 20px); } to { opacity: 1; transform: translateX(-50%); } }
+  .logo, .meta a, .try, .hero h1 span, .cells > * { animation: rise 900ms var(--retake-ease) backwards; }
+  .hero .copy { animation: rise-x 900ms var(--retake-ease) backwards; }
+  .logo { animation-delay: 380ms; }
+  .meta a:nth-child(1) { animation-delay: 450ms; }
+  .meta a:nth-child(2) { animation-delay: 520ms; }
+  .meta a:nth-child(3) { animation-delay: 590ms; }
+  .try { animation-delay: 590ms; }
+  .hero h1 span:nth-child(1) { animation-delay: 300ms; }
+  .hero h1 span:nth-child(2) { animation-delay: 370ms; }
+  .hero h1 span:nth-child(3) { animation-delay: 440ms; }
+  .cells > *:nth-child(1) { animation-delay: 560ms; }
+  .cells > *:nth-child(2) { animation-delay: 620ms; }
+  .cells > *:nth-child(3) { animation-delay: 680ms; }
+  .cells > *:nth-child(4) { animation-delay: 740ms; }
+  .cells > *:nth-child(5) { animation-delay: 800ms; }
+  .hero .copy { animation-delay: 860ms; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 900px) {
+    .meta { gap: 20px; }
+    .cell { font-size: clamp(1.0625rem, 2.4vw, 1.375rem); }
+  }
+  @media (max-width: 700px) {
+    .logo img { height: 30px; }
+    .meta { font-size: 0.875rem; }
+    .try { min-height: 40px; padding: 0 16px; }
+    .try::after { content: ""; position: absolute; inset: -4px -6px; }
+    .try .long { display: none; }
+    .hero h1 { top: 30%; font-size: clamp(3.25rem, 15vw, 4.25rem); line-height: 0.92; white-space: normal; }
+    .hero .copy { top: auto; bottom: calc(var(--m) + env(safe-area-inset-bottom)); width: calc(100vw - 2 * var(--m)); font-size: 1rem; }
+    .controller { top: 52%; width: calc(100vw - 2 * var(--m)); height: 160px; }
+    .track { top: 0; height: 160px; border-radius: 28px; }
+    .cells { grid-template-columns: 1fr 1fr; grid-template-rows: 52px 54px 54px; }
+    .cell { font-size: 1.0625rem; }
+    button.cell { border-radius: 18px; margin: 2px 4px; height: calc(100% - 4px); }
+    .cell-label { grid-column: 1 / -1; }
+    button.cell:active { background: rgb(255 255 255 / 0.1); }
+    button.cell:focus-visible { outline-offset: -3px; }
+    .capsule { opacity: 0; pointer-events: none; }
+    .controller.collapsed .capsule, .controller.restoring .capsule, .probe { left: 50%; top: 4vh; top: 4dvh; transform: translate(-50%, -50%); width: 196px; height: 64px; border-radius: 999px; }
+    .controller.collapsed .capsule { opacity: 1; background-color: rgb(255 255 255 / 0.16); }
+    .controller.collapsed .track { left: calc(50% - 96px); width: 192px; top: calc(4vh - 32px); top: calc(4dvh - 32px); height: 64px; border-radius: 999px; }
+  }
+  @media (max-width: 700px) and (max-height: 700px) {
+    .controller { top: 46%; }
+    .hero h1 { top: 24%; }
+  }
+  @media (max-height: 520px) and (orientation: landscape) {
+    .hero h1 { top: 18%; font-size: clamp(2.25rem, 9vh, 3.5rem); }
+    .controller { top: 46%; }
+    .hero .copy { top: auto; bottom: var(--m); }
+  }
+  @media (max-width: 700px) and (max-height: 520px) and (orientation: landscape) {
+    .hero h1 { top: 12%; font-size: clamp(1.75rem, 7vh, 2.75rem); }
+    .controller { top: 42%; height: 120px; }
+    .track { height: 120px; }
+    .cells { grid-template-rows: 38px 41px 41px; }
+    .cell { font-size: 1rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .curtain { display: none; }
+    .logo, .meta a, .try, .hero h1 span, .cells > *, .hero .copy { animation: none; }
+    .capsule, .track, .cell, .cell .lbl, .cell .rst, .hero h1 span, .try, .copy p, .look.is-entering, .look.is-entering .photo,
+    .controller.collapsed .capsule, .controller.restoring .capsule, .controller.rear-faded .track,
+    .controller.restoring .cell:not(.is-chosen), .controller.restoring .cell.is-chosen .lbl { transition-duration: 1ms !important; transition-delay: 0s !important; }
+    .cell.is-reset .rst { animation-duration: 1ms; }
+    .stage.title-hidden .hero h1 span, .controller.collapsed .cell:not(.is-chosen), .copy p { filter: none !important; }
+    .bgv { display: none; }
+  }
+/* PAGE-CSS:START */
+  /* ---------- the page below the scene ---------- */
+  html { scroll-behavior: smooth; }
+  .meta a { position: relative; color: var(--ink); text-decoration: none; padding: 12px 0; }
+  .meta a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 6px; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform 400ms var(--retake-ease); }
+  .meta a:hover::after, .meta a:focus-visible::after { transform: scaleX(1); }
+  .sec { padding: clamp(96px, 11vw, 176px) var(--m); }
+  .h2 { font-size: clamp(2.25rem, 1.2rem + 4vw, 4.5rem); font-weight: 400; line-height: 0.95; letter-spacing: -0.035em; text-wrap: balance; }
+  .sec-lead { font-size: var(--step-body); line-height: 1.5; max-width: 46ch; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-size: var(--step-small); font-weight: 500; text-decoration: none; transition: background-color 300ms var(--retake-ease), transform 200ms var(--retake-ease); }
+  .btn:hover, .btn:focus-visible { background: var(--ink); }
+  .btn:active { transform: scale(0.97); }
+  .tlink { color: var(--ink); font-size: var(--step-small); text-underline-offset: 5px; text-decoration-thickness: 1px; }
+  .tlink:hover { color: var(--accent); }
+
+  /* the five ranges: the picture is the card, in a mixed-size grid */
+  .ranges { background: var(--carmine-deep); overflow: hidden; }
+  .rgrid { list-style: none; margin-top: 64px; display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: clamp(240px, 23vw, 360px); gap: 16px; }
+  .rc-silk { grid-column: 1 / 8; grid-row: span 2; }
+  .rc-blouse, .rc-print { grid-column: 8 / 13; }
+  .rc-brasso { grid-column: 1 / 6; }
+  .rc-dyed { grid-column: 6 / 13; }
+  .rc a { position: relative; display: block; height: 100%; border-radius: 8px; overflow: hidden; color: var(--ink); text-decoration: none; background: #2a2a2a; isolation: isolate; }
+  .rc-media { position: absolute; inset: 0; }
+  .rc-img, .rc-vid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 22%; transition: opacity 1200ms var(--retake-ease), transform 1200ms var(--retake-ease); }
+  .rc-img { opacity: 0; }
+  .rc-img.on { opacity: 1; }
+  .js .rc-img.on { animation: kenburns 7s linear both; }
+  @keyframes kenburns { from { transform: scale(1.12) translateY(1.5%); } to { transform: scale(1.02) translateY(0); } }
+  .rc a:hover .rc-media, .rc a:focus-visible .rc-media { transform: scale(1.04); }
+  .rc-media { transition: transform 900ms var(--retake-ease); }
+  .rc a::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: linear-gradient(180deg, rgb(12 5 4 / 0) 40%, rgb(12 5 4 / 0.72) 100%); } /* taste-skill-ignore: scrim under text on a photograph */
+  .rc-brasso a::after { background: linear-gradient(180deg, rgb(12 5 4 / 0.1) 0, rgb(12 5 4 / 0.9) 62%); } /* taste-skill-ignore: deeper scrim over printed flyers */
+  .rc-text { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; display: grid; gap: 6px; padding: clamp(20px, 2.2vw, 32px); }
+  .rc .r-name { font-size: clamp(1.75rem, 1rem + 2.4vw, 3rem); line-height: 1; letter-spacing: -0.03em; }
+  .rc-silk .r-name { font-size: clamp(2.25rem, 1rem + 4vw, 4.5rem); }
+  .rc .r-fab { font-size: var(--step-body); color: #fbe3e5; }
+  .rc-go { display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; font-size: var(--step-small); color: var(--accent); }
+  .rc-go svg { width: 20px; height: 20px; transition: transform 500ms var(--retake-ease); }
+  .rc a:hover .rc-go svg, .rc a:focus-visible .rc-go svg { transform: translateX(6px); }
+  /* the drape: each card is revealed bottom to top as it arrives */
+  .js .rc[data-rise] { opacity: 1; transform: none; clip-path: inset(100% 0 0 0 round 8px); transition: clip-path 1300ms var(--retake-slow-ease); transition-delay: calc(var(--d, 0) * 110ms); }
+  .js .rc[data-rise].in { clip-path: inset(0 0 0 0 round 8px); }
+  .js .rc[data-rise] .rc-media { transform: scale(1.18); transition: transform 1800ms var(--retake-ease); transition-delay: calc(var(--d, 0) * 110ms); }
+  .js .rc[data-rise].in .rc-media { transform: none; }
+  .js .rc[data-rise].in a:hover .rc-media { transform: scale(1.04); transition-delay: 0s; }
+
+  /* the reel: every saree, drifting past in two rows */
+  .reel { margin-top: 96px; margin-inline: calc(var(--m) * -1); display: grid; gap: 16px; }
+  .reel-row { overflow: hidden; }
+  .reel-track { display: flex; gap: 16px; width: max-content; animation: reel 70s linear infinite; will-change: transform; }
+  .reel-img { display: block; height: clamp(180px, 18vw, 300px); width: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 8px; flex: none; }
+  @keyframes reel { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* WhatsApp: the green is WhatsApp's own, used only on its buttons */
+  .btn-wa { gap: 10px; background: #25d366; color: #08240f; }
+  .btn-wa:hover, .btn-wa:focus-visible { background: var(--ink); }
+  .wa-ico { width: 20px; height: 20px; flex: none; }
+  .wa { background: var(--carmine); display: grid; grid-template-columns: 7fr 5fr; gap: 64px; align-items: center; }
+  .wa .sec-lead { margin-top: 32px; color: #fbe3e5; }
+  .wa-steps { list-style: none; margin-top: 48px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .wa-steps h3 { font-size: var(--step-lead); font-weight: 500; line-height: 1.2; }
+  .wa-steps p { margin-top: 8px; font-size: var(--step-body); line-height: 1.5; color: #fbe3e5; }
+  .wa .acts { margin-top: 48px; }
+  .wa-qr { justify-self: end; width: min(100%, 360px); background: #fff; color: #1e1c1c; border-radius: 8px; padding: 28px; display: grid; gap: 16px; }
+  .wa-qr img { display: block; width: 100%; height: auto; }
+  .wa-qr figcaption { font-size: var(--step-small); line-height: 1.4; }
+  .craft { background: #1e1c1c; }
+  .craft .steps p { color: #e4dfdd; }
+  .ig { background: var(--carmine); }
+  .ig .sec-lead .tlink { font-size: inherit; }
+  .ig-grid { list-style: none; margin-top: 56px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+  .ig-grid a { display: block; aspect-ratio: 1; overflow: hidden; border-radius: 8px; background: var(--carmine-deep); }
+  .ig-grid img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transition: transform 700ms var(--retake-ease); }
+  .ig-grid a:hover img, .ig-grid a:focus-visible img { transform: scale(1.06); }
+  .ig-acts { margin-top: 48px; }
+  .foot-contact { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px 32px; font-size: var(--step-lead); }
+  .foot-contact a { color: var(--ink); text-decoration: none; }
+  .foot-contact a:hover { color: var(--accent); }
+  /* the floating order button appears once the film has scrolled away */
+  .wa-float { position: fixed; right: calc(var(--m) + env(safe-area-inset-right)); bottom: calc(var(--m) + env(safe-area-inset-bottom)); z-index: 60;
+    display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 22px 0 18px; border-radius: 999px; background: #25d366; color: #08240f;
+    font-size: var(--step-small); font-weight: 500; text-decoration: none;
+    transform: translateY(140%); opacity: 0; transition: transform 600ms var(--retake-ease), opacity 400ms var(--retake-ease), background-color 300ms; }
+  .wa-float.show { transform: none; opacity: 1; }
+  .wa-float:hover, .wa-float:focus-visible { background: #fff; }
+  .wa-float .wa-ico { width: 24px; height: 24px; }
+
+  /* catalogue on charcoal */
+  .cat { background: #1e1c1c; }
+  .sec-head { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 48px; align-items: end; }
+  .sec-head .sec-lead { justify-self: end; color: #d9d4d2; }
+  .chips { margin-top: 56px; display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border-radius: 999px; background: rgb(255 255 255 / 0.06); }
+  .chip { min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; background: transparent; font-size: var(--step-small); color: #d9d4d2; cursor: pointer; transition: background-color 400ms var(--retake-ease), color 300ms var(--retake-ease); }
+  .chip:hover { color: var(--ink); }
+  .chip[aria-pressed="true"] { background: rgb(255 255 255 / 0.16); color: var(--ink); }
+  .count { margin-top: 20px; font-size: var(--step-small); color: #bdb6b3; }
+  .grid { list-style: none; margin-top: 40px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 56px 20px; }
+  .p[hidden] { display: none; }
+  .p a { display: flex; flex-direction: column; color: var(--ink); text-decoration: none; }
+  .p-img { display: block; overflow: hidden; background: #2a2a2a; }
+  .p-img img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; transition: transform 700ms var(--retake-ease); }
+  .p a:hover .p-img img, .p a:focus-visible .p-img img { transform: scale(1.04); }
+  .p-name { margin-top: 18px; font-size: var(--step-body); font-weight: 500; line-height: 1.3; }
+  .p-facts { margin-top: 4px; font-size: var(--step-small); color: #bdb6b3; }
+  .p-ask { margin-top: 12px; align-self: flex-start; font-size: var(--step-small); color: var(--accent); position: relative; }
+  .p-ask::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform 400ms var(--retake-ease); }
+  .p a:hover .p-ask::after { transform: scaleX(1); }
+  .none { margin-top: 32px; font-size: var(--step-body); }
+  .none a { color: var(--accent); }
+  .more-wrap { display: flex; justify-content: center; margin-top: 64px; }
+  .more-wrap[hidden] { display: none; }
+  .more { min-height: 52px; padding: 0 28px; border: 0; border-radius: 999px; background: rgb(255 255 255 / 0.1); color: var(--ink); font-size: var(--step-small); font-weight: 500; cursor: pointer; transition: background-color 300ms var(--retake-ease); }
+  .more:hover, .more:focus-visible { background: rgb(255 255 255 / 0.18); }
+
+  /* how to order on carmine */
+  .order { display: grid; grid-template-columns: 6fr 5fr; gap: 64px; align-items: center; background: var(--carmine); }
+  .steps { list-style: none; margin-top: 56px; display: grid; gap: 40px; }
+  .steps h3 { font-size: var(--step-lead); font-weight: 500; line-height: 1.2; }
+  .steps p { margin-top: 8px; font-size: var(--step-body); line-height: 1.5; max-width: 44ch; color: #fbe3e5; }
+  .order .btn { margin-top: 56px; }
+  .order-pic, .whole-pic { overflow: hidden; }
+  .order-pic img, .whole-pic img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+  .order-pic img { object-position: 45% 30%; }
+  .whole-pic img { object-position: 50% 25%; }
+
+  /* wholesale on charcoal */
+  .whole { display: grid; grid-template-columns: 5fr 6fr; gap: 64px; align-items: center; background: #1e1c1c; }
+  .whole .sec-lead { margin-top: 32px; color: #e4dfdd; }
+  .facts { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px 32px; max-width: 520px; }
+  .facts dt { font-size: var(--step-small); color: #bdb6b3; }
+  .facts dd { margin-top: 2px; font-size: var(--step-body); overflow-wrap: anywhere; }
+  .facts dd a { color: var(--ink); text-underline-offset: 4px; text-decoration-thickness: 1px; }
+  .facts dd a:hover { color: var(--accent); }
+  .acts { margin-top: 48px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px 32px; }
+
+  /* questions on carmine */
+  .faq { background: var(--carmine); display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: start; }
+  .acc { display: grid; gap: 12px; }
+  .acc details { background: var(--carmine-deep); border-radius: 24px; padding: 0 28px; transition: background-color 300ms var(--retake-ease); }
+  .acc details[open] { background: rgb(0 0 0 / 0.16); }
+  .acc summary { list-style: none; position: relative; cursor: pointer; display: flex; align-items: center; min-height: 72px; padding-right: 40px; font-size: var(--step-body); font-weight: 500; }
+  .acc summary::-webkit-details-marker { display: none; }
+  .chev { position: absolute; right: 2px; top: 50%; width: 14px; height: 14px; margin-top: -7px; }
+  .chev::before, .chev::after { content: ""; position: absolute; top: 6px; width: 9px; height: 2px; background: currentColor; transition: transform 400ms var(--retake-ease); }
+  .chev::before { left: 0; transform: rotate(45deg); }
+  .chev::after { right: 0; transform: rotate(-45deg); }
+  details[open] .chev::before { transform: rotate(-45deg); }
+  details[open] .chev::after { transform: rotate(45deg); }
+  .acc details p { padding-bottom: 26px; font-size: var(--step-body); line-height: 1.5; max-width: 56ch; color: #fbe3e5; }
+
+  /* footer: the name returns across the width */
+  .foot { background: var(--carmine-deep); padding: clamp(72px, 9vw, 144px) var(--m) calc(var(--m) + env(safe-area-inset-bottom)); }
+  .foot-name { font-size: 17.4vw; line-height: 0.85; letter-spacing: -0.045em; white-space: nowrap; }
+  .foot-row { margin-top: 56px; display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px 40px; align-items: baseline; font-size: var(--step-small); }
+  .foot-row p:first-child { max-width: 34ch; }
+  .foot-links { display: flex; flex-wrap: wrap; gap: 4px 24px; }
+  .foot-links a { color: var(--ink); text-decoration: none; padding: 10px 0; position: relative; }
+  .foot-links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 6px; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform 400ms var(--retake-ease); }
+  .foot-links a:hover::after { transform: scaleX(1); }
+  .foot-copy { justify-self: end; color: var(--muted); }
+
+  /* entrances below the fold, only when script runs */
+  .js [data-rise], .js .p { opacity: 0; transform: translateY(24px); transition: opacity 900ms var(--retake-ease), transform 900ms var(--retake-ease); transition-delay: calc(var(--d, 0) * 80ms); }
+  .js [data-rise].in, .js .p.in { opacity: 1; transform: none; }
+
+  @media (max-width: 1024px) {
+    .grid { grid-template-columns: repeat(3, 1fr); }
+    .sec-head { grid-template-columns: 1fr; }
+    .sec-head .sec-lead { justify-self: start; }
+    .order, .whole, .faq, .wa { grid-template-columns: 1fr; gap: 48px; }
+    .wa-qr { justify-self: start; }
+    .ig-grid { grid-template-columns: repeat(3, 1fr); }
+    .rc-silk { grid-column: 1 / -1; grid-row: span 2; }
+    .rc-blouse, .rc-brasso { grid-column: 1 / 7; }
+    .rc-print, .rc-dyed { grid-column: 7 / 13; }
+    .whole-pic { order: 2; }
+  }
+  @media (max-width: 700px) {
+    .meta a:nth-child(n+2) { display: none; }
+    .grid { grid-template-columns: 1fr 1fr; gap: 36px 12px; }
+    .wa-steps { grid-template-columns: 1fr; gap: 24px; }
+    .wa-qr { display: none; }   /* a phone cannot scan its own screen */
+    .ig-grid { gap: 8px; }
+    .wa-float span { display: none; }
+    .wa-float { padding: 0; width: 60px; min-height: 60px; justify-content: center; }
+    .foot-contact { font-size: var(--step-body); flex-direction: column; }
+    .rgrid { grid-template-columns: 1fr; grid-auto-rows: auto; gap: 12px; margin-top: 40px; }
+    .rc-silk, .rc-blouse, .rc-print, .rc-brasso, .rc-dyed { grid-column: 1; grid-row: auto; }
+    .rc a { aspect-ratio: 4 / 3.4; }
+    .rc-silk a { aspect-ratio: 4 / 5; }
+    .reel { margin-top: 56px; }
+    .p-name { font-size: 1rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; background: transparent; }
+    .chip { background: rgb(255 255 255 / 0.06); padding: 0 16px; }
+    .acc details { padding: 0 20px; border-radius: 20px; }
+    .foot-row { grid-template-columns: 1fr; }
+    .foot-copy { justify-self: start; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js [data-rise], .js .p { opacity: 1; transform: none; transition: none; }
+    .p-img img, .btn, .chip { transition: none; }
+    .js .rc[data-rise], .js .rc[data-rise] .rc-media { clip-path: none; transform: none; transition: none; }
+    .js .rc-img.on { animation: none; }
+    .reel-track { animation-duration: 180s; }   /* still drifts, slowly, so the reel never looks frozen */
+  }
+  /* ---------- phones: the scene stacks from the bottom up, so nothing can overlap on any screen height ---------- */
+  @media (max-width: 700px) and (orientation: portrait) {
+    .stage { --copy-h: 168px; --ctl-h: 160px; --base: calc(var(--m) + env(safe-area-inset-bottom)); }
+    .hero .copy { top: auto; bottom: var(--base); font-size: 0.9375rem; line-height: 1.45; }
+    .copy .c-base { gap: 16px; }
+    .controller { top: auto; bottom: calc(var(--base) + var(--copy-h) + 20px); height: var(--ctl-h); }
+    .track { height: var(--ctl-h); }
+    .hero h1 { top: auto; bottom: calc(var(--base) + var(--copy-h) + var(--ctl-h) + 44px); font-size: clamp(2.6rem, 12.6vw, 4rem); line-height: 0.92; text-wrap: balance; }
+    .sec { padding: 80px var(--m); }
+    .p-name { display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .acts { flex-direction: column; align-items: stretch; gap: 16px; }
+    .acts .btn { width: 100%; }
+    .acts .tlink { text-align: center; padding: 6px 0; }
+    .foot { padding-bottom: calc(104px + env(safe-area-inset-bottom)); }   /* room for the floating order button */
+  }
+  @media (max-width: 700px) and (orientation: portrait) and (max-height: 700px) {
+    .stage { --copy-h: 160px; --ctl-h: 136px; }
+    .cells { grid-template-rows: 44px 46px 46px; }
+    .cell { font-size: 1rem; }
+    .hero h1 { font-size: clamp(2.3rem, 11.4vw, 3.25rem); }
+    header { padding-top: calc(14px + env(safe-area-inset-top)); }
+  }
+  @media (max-width: 420px) {
+    .facts { grid-template-columns: 1fr; gap: 18px; }
+    .chip { padding: 0 14px; }
+  }
+/* PAGE-CSS:END */
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="look is-visible" data-look="base" style="--bd: #1a1210">
+    <img class="cover" src="media/banarasi-loop.jpg" width="1280" height="720" alt="" fetchpriority="high" decoding="async">
+    <video class="cover bgv front" src="media/banarasi-reveal.mp4" poster="media/banarasi-first.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
+    <video class="cover bgv" src="media/banarasi-reveal.mp4" poster="media/banarasi-loop.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
+  </div>
+  <div class="look" data-look="chaap" style="--bd: #1a1210">
+    <img class="cover" src="media/chaap-loop.jpg" width="1280" height="720" alt="" decoding="async">
+    <video class="cover bgv front" src="media/chaap-film.mp4" poster="media/chaap-first.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
+    <video class="cover bgv" src="media/chaap-film.mp4" poster="media/chaap-loop.jpg" muted playsinline preload="auto" aria-hidden="true"></video>
+  </div>
+  <div class="look" data-look="beads" style="--bd: linear-gradient(180deg, #887e6c 2%, #8d7d6b 8%, #918374 12%, #898071 18%, #887e6e 22%, #807a6e 28%, #797669 32%, #706c5f 38%, #6a6659 42%, #5b5449 48%, #3c372a 52%, #131a18 58%, #0c0f0b 62%, #130d07 68%, #110a06 72%, #180f07 78%, #312727 82%, #58524d 88%, #736d6c 92%, #807a78 98%)"><!-- taste-skill-ignore: the photo\'s own wall, extended -->
+    <img class="photo" src="images/products/stitched-blouse-triple-beads-concept-w1600.webp" width="853" height="1280" alt="" decoding="async">
+  </div>
+  <div class="look" data-look="foil" style="--bd: linear-gradient(180deg, #857866 2%, #887766 8%, #8c7c6c 12%, #847a6e 18%, #837969 22%, #7e7669 28%, #777265 32%, #6e695d 38%, #696457 42%, #5b5547 48%, #413a2e 52%, #161f1a 58%, #0d130e 62%, #150f07 68%, #110a05 72%, #211205 78%, #382f2b 82%, #58514f 88%, #736a68 92%, #7e7775 98%)"><!-- taste-skill-ignore: the photo\'s own wall, extended -->
+    <img class="photo" src="images/products/stitched-blouse-fendy-chiffon-foil-print-w1600.webp" width="853" height="1280" alt="" decoding="async">
+  </div>
+  <div class="look" data-look="jhadkan" style="--bd: linear-gradient(180deg, #908066 2%, #977f67 8%, #977e69 12%, #8f7d68 18%, #88745b 22%, #7f6e54 28%, #79694d 32%, #705a41 38%, #655238 42%, #5e492f 48%, #372718 52%, #060a08 58%, #040505 62%, #040403 68%, #020303 72%, #030203 78%, #5b4346 82%, #827174 88%, #91878b 92%, #988a8b 98%)"><!-- taste-skill-ignore: the photo\'s own wall, extended -->
+    <img class="photo" src="images/products/stiched-blouse-multi-work-with-jhadkan-w1600.webp" width="960" height="1280" alt="" decoding="async">
+  </div>
+
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="curtain" aria-hidden="true"></div>
+
+  <div class="hero">
+    <h1><span>Sarees</span> <span>woven in</span> <span>Surat</span></h1>
+    <div class="copy" aria-live="off">
+      <p class="c-base"><span>Retail and wholesale sarees, lehengas and suits from Surat, Gujarat, est. 1988. Free shipping across India.</span><a class="cta-cat" href="https://wa.me/c/917211172105" target="_blank" rel="noopener">Shop the catalogue on WhatsApp</a></p>
+      <p class="c-look"><span id="lookName"></span> <a class="ask" id="lookAsk" href="#" target="_blank" rel="noopener" tabindex="-1">Ask the price on WhatsApp</a></p>
+    </div>
+  </div>
+
+  <div class="controller" id="controller" role="group" aria-label="Choose a look">
+    <div class="glass track" aria-hidden="true"></div>
+    <div class="glass capsule" aria-hidden="true"></div>
+    <div class="probe" id="probe" aria-hidden="true"></div>
+    <div class="cells">
+      <div class="cell cell-label">Choose a look →</div>
+      <button type="button" class="cell opt" data-index="1" data-key="chaap" disabled><span class="face"><span class="lbl">Chaap dyed</span><span class="rst" aria-hidden="true">Reset</span></span></button>
+      <button type="button" class="cell opt" data-index="2" data-key="beads" disabled><span class="face"><span class="lbl">Beadwork</span><span class="rst" aria-hidden="true">Reset</span></span></button>
+      <button type="button" class="cell opt" data-index="3" data-key="foil" disabled><span class="face"><span class="lbl">Foil print</span><span class="rst" aria-hidden="true">Reset</span></span></button>
+      <button type="button" class="cell opt" data-index="4" data-key="jhadkan" disabled><span class="face"><span class="lbl">Jhadkan</span><span class="rst" aria-hidden="true">Reset</span></span></button>
+    </div>
+  </div>
+
+  <header>
+    <a class="logo" href="index.html" aria-label="Surya Sarees home"><img src="images/logo-mark.png" alt="Surya Sarees" width="660" height="410"></a>
+    <nav class="meta" aria-label="Main"><a href="#catalogue">Full catalogue</a><a href="#order">How to order</a><a href="https://instagram.com/surya_sarees_surat" target="_blank" rel="noopener">Instagram</a></nav>
+    <a class="try" id="orderLink" href="#" target="_blank" rel="noopener noreferrer" aria-label="Order on WhatsApp">Order<span class="long">&nbsp;on WhatsApp</span></a>
+  </header>
+
+  <p class="sr-only" id="status" role="status" aria-live="polite">Loading the looks…</p>
+  <div class="notice" id="notice" role="alert" hidden><span id="noticeText"></span><button type="button" id="retry">Retry</button></div>
+</div>
+<!-- PAGE:START -->
+<main id="main">
+
+  <!-- the five signature ranges -->
+  <section class="sec ranges" id="collections" aria-labelledby="col-h">
+    <div class="sec-head" data-rise>
+      <h2 id="col-h" class="h2">Our collections</h2>
+      <p class="sec-lead">Five signature ranges, each defined by fabric and finish.</p>
+    </div>
+    <ul class="rgrid">
+      <li class="rc rc-silk" data-rise><a href="#catalogue" data-pick="silk" aria-label="Silk Range: Banarasi satin and satin meena, 7 designs"><span class="rc-media"><video class="rc-vid" src="media/chaap-film.mp4" poster="media/chaap-loop.jpg" muted loop playsinline preload="metadata" aria-hidden="true"></video></span><span class="rc-text"><span class="r-name">Silk Range</span><span class="r-fab">Banarasi satin and satin meena, 7 designs</span><span class="rc-go">Explore the range<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></span></a></li>
+      <li class="rc rc-blouse" data-rise><a href="#catalogue" data-pick="blouse" aria-label="Stitched Blouse: Fendy chiffon and fendy satin, 8 designs"><span class="rc-media"><img class="rc-img on" src="images/products/stitched-blouse-tussar-rani-w640.webp" alt="" width="640" height="854" loading="lazy" decoding="async"><img class="rc-img" src="images/products/stitched-blouse-triple-beads-concept-w640.webp" alt="" width="640" height="960" loading="lazy" decoding="async"><img class="rc-img" src="images/products/stitched-blouse-fendy-chiffon-foil-print-w640.webp" alt="" width="640" height="960" loading="lazy" decoding="async"><img class="rc-img" src="images/products/stitched-blouse-fendy-satin-fancy-w640.webp" alt="" width="640" height="853" loading="lazy" decoding="async"></span><span class="rc-text"><span class="r-name">Stitched Blouse</span><span class="r-fab">Fendy chiffon and fendy satin, 8 designs</span><span class="rc-go">Explore the range<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></span></a></li>
+      <li class="rc rc-print" data-rise><a href="#catalogue" data-pick="print" aria-label="Print Range: Mango malai and digital print, 12 designs"><span class="rc-media"><img class="rc-img on" src="images/products/mango-malai-viral-w640.webp" alt="" width="640" height="853" loading="lazy" decoding="async"><img class="rc-img" src="images/products/digital-print-weightless-w640.webp" alt="" width="640" height="853" loading="lazy" decoding="async"><img class="rc-img" src="images/products/fancy-weightless-lehariya-w640.webp" alt="" width="640" height="853" loading="lazy" decoding="async"><img class="rc-img" src="images/products/heavy-georgette-print-w640.webp" alt="" width="640" height="876" loading="lazy" decoding="async"></span><span class="rc-text"><span class="r-name">Print Range</span><span class="r-fab">Mango malai and digital print, 12 designs</span><span class="rc-go">Explore the range<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></span></a></li>
+      <li class="rc rc-brasso" data-rise><a href="#catalogue" data-pick="brasso" aria-label="Brasso Range: Chiffon brasso and moss brasso, 12 designs"><span class="rc-media"><img class="rc-img on" src="images/products/chiffon-brasso-ratan-priya-w640.webp" alt="" width="640" height="853" loading="lazy" decoding="async"><img class="rc-img" src="images/products/chiffon-brasso-shringar-w640.webp" alt="" width="640" height="853" loading="lazy" decoding="async"><img class="rc-img" src="images/products/moss-brasso-flower-queen-w640.webp" alt="" width="640" height="853" loading="lazy" decoding="async"><img class="rc-img" src="images/products/moss-brasso-neel-kamal-w640.webp" alt="" width="640" height="853" loading="lazy" decoding="async"></span><span class="rc-text"><span class="r-name">Brasso Range</span><span class="r-fab">Chiffon brasso and moss brasso, 12 designs</span><span class="rc-go">Explore the range<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></span></a></li>
+      <li class="rc rc-dyed" data-rise><a href="#catalogue" data-pick="dyed" aria-label="Dyed Work: Heavy jhadkan and Swarovski, 21 designs"><span class="rc-media"><img class="rc-img on" src="images/products/fancy-single-beads-work-with-running-blouse-w640.webp" alt="" width="640" height="853" loading="lazy" decoding="async"><img class="rc-img" src="images/products/fancy-fabric-full-saree-heavy-jhadkan-work-w640.webp" alt="" width="640" height="854" loading="lazy" decoding="async"><img class="rc-img" src="images/products/classy-border-blouse-saree-on-fendy-satin-with-heavy-running-blouse-full-saree-jhadkan-w640.webp" alt="" width="640" height="854" loading="lazy" decoding="async"><img class="rc-img" src="images/products/dyed-work-fancy-with-heavy-border-full-heavy-swaroski-saree-w640.webp" alt="" width="640" height="960" loading="lazy" decoding="async"></span><span class="rc-text"><span class="r-name">Dyed Work</span><span class="r-fab">Heavy jhadkan and Swarovski, 21 designs</span><span class="rc-go">Explore the range<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></span></a></li>
+    </ul>
+    <div class="reel" aria-hidden="true"><div class="reel-row"><div class="reel-track"><img class="reel-img" src="images/products/banarasi-satin-chaap-with-fancy-stitched-blouse-w480.webp" alt="" width="480" height="640" loading="lazy" decoding="async"><img class="reel-img" src="images/products/chaap-dyed-banarasi-satin-with-stiched-blouse-concept-w480.webp" alt="" width="480" height="720" loading="lazy" decoding="async"><img class="reel-img" src="images/products/stitched-blouse-tussar-rani-w480.webp" alt="" width="480" height="641" loading="lazy" decoding="async"><img class="reel-img" src="images/products/stitched-blouse-triple-beads-concept-w480.webp" alt="" width="480" height="720" loading="lazy" decoding="async"><img class="reel-img" src="images/products/fancy-single-beads-work-with-running-blouse-w480.webp" alt="" width="480" height="640" loading="lazy" decoding="async"><img class="reel-img" src="images/products/fancy-fabric-full-saree-heavy-jhadkan-work-w480.webp" alt="" width="480" height="641" loading="lazy" decoding="async"><img class="reel-img" src="images/products/stitched-blouse-fendy-chiffon-foil-print-w480.webp" alt="" width="480" height="720" loading="lazy" decoding="async"><img class="reel-img" src="images/products/mango-malai-viral-w480.webp" alt="" width="480" height="640" loading="lazy" decoding="async"><img class="reel-img" src="images/products/stitched-blouse-fendy-satin-fancy-w480.webp" alt="" width="480" height="640" loading="lazy" decoding="async"><img class="reel-img" src="images/products/classy-border-blouse-saree-on-fendy-satin-with-heavy-running-blouse-full-saree-jhadkan-w480.webp" alt="" width="480" height="641" loading="lazy" decoding="async"><img class="reel-img" src="images/products/stiched-blouse-multi-work-with-jhadkan-w480.webp" alt="" width="480" height="640" loading="lazy" decoding="async"><img class="reel-img" src="images/products/dyed-work-fancy-with-heavy-border-full-heavy-swaroski-saree-w480.webp" alt="" width="480" height="720" loading="lazy" decoding="async"><img class="reel-img" src="images/products/stich-blouse-fandy-satin-w480.webp" alt="" width="480" height="640" loading="lazy" decoding="async"><img class="reel-img" src="images/products/stitched-blouse-fancy-cording-w480.webp" alt="" width="480" height="641" loading="lazy" decoding="async"><img class="reel-img" src="images/products/banarasi-satin-chaap-with-fancy-stitched-blouse-w480.webp" alt="" width="480" height="640" loading="lazy" decoding="async"><img class="reel-img" src="images/products/chaap-dyed-banarasi-satin-with-stiched-blouse-concept-w480.webp" alt="" width="480" height="720" loading="lazy" decoding="async"><img class="reel-img" src="images/products/stitched-blouse-tussar-rani-w480.webp" alt="" width="480" height="641" loading="lazy" decoding="async"><img class="reel-img" src="images/products/stitched-blouse-triple-beads-concept-w480.webp" alt="" width="480" height="720" loading="lazy" decoding="async"><img class="reel-img" src="images/products/fancy-single-beads-work-with-running-blouse-w480.webp" alt="" width="480" height="640" loading="lazy" decoding="async"><img class="reel-img" src="images/products/fancy-fabric-full-saree-heavy-jhadkan-work-w480.webp" alt="" width="480" height="641" loading="lazy" decoding="async"><img class="reel-img" src="images/products/stitched-blouse-fendy-chiffon-foil-print-w480.webp" alt="" width="480" height="720" loading="lazy" decoding="async"><img class="reel-img" src="images/products/mango-malai-viral-w480.webp" alt="" width="480" height="640" loading="lazy" decoding="async"><img class="reel-img" src="images/products/stitched-blouse-fendy-satin-fancy-w480.webp" alt="" width="480" height="640" loading="lazy" decoding="async"><img class="reel-img" src="images/products/classy-border-blouse-saree-on-fendy-satin-with-heavy-running-blouse-full-saree-jhadkan-w480.webp" alt="" width="480" height="641" loading="lazy" decoding="async"><img class="reel-img" src="images/products/stiched-blouse-multi-work-with-jhadkan-w480.webp" alt="" width="480" height="640" loading="lazy" decoding="async"><img class="reel-img" src="images/products/dyed-work-fancy-with-heavy-border-full-heavy-swaroski-saree-w480.webp" alt="" width="480" height="720" loading="lazy" decoding="async"><img class="reel-img" src="images/products/stich-blouse-fandy-satin-w480.webp" alt="" width="480" height="640" loading="lazy" decoding="async"><img class="reel-img" src="images/products/stitched-blouse-fancy-cording-w480.webp" alt="" width="480" height="641" loading="lazy" decoding="async"></div></div></div>
+  </section>
+
+  <!-- the catalogue: every saree in the products folder, on charcoal so each keeps its own colour -->
+  <section class="sec cat" id="catalogue" aria-labelledby="cat-h">
+    <div class="sec-head" data-rise>
+      <h2 id="cat-h" class="h2">Full catalogue</h2>
+      <p class="sec-lead">60 designs across every range. Wholesale rates are available on enquiry. Tap any saree to order it on WhatsApp.</p>
+    </div>
+    <div class="chips" role="group" aria-label="Show a range" data-rise><button type="button" class="chip" data-f="all" aria-pressed="true">All</button><button type="button" class="chip" data-f="blouse" aria-pressed="false">Stitched Blouse</button><button type="button" class="chip" data-f="print" aria-pressed="false">Print Range</button><button type="button" class="chip" data-f="brasso" aria-pressed="false">Brasso Range</button><button type="button" class="chip" data-f="silk" aria-pressed="false">Silk Range</button><button type="button" class="chip" data-f="dyed" aria-pressed="false">Dyed Work</button></div>
+    <p class="count" id="count" aria-live="polite">All 60 designs</p>
+    <ul class="grid" id="grid">
+        <li class="p" data-range="silk"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Banarasi%20Satin%20Chaap%20with%20Fancy%20Stitched%20Blouse.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/banarasi-satin-chaap-with-fancy-stitched-blouse-w640.webp" alt="Banarasi Satin Chaap with Fancy Stitched Blouse" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Banarasi Satin Chaap with Fancy Stitched Blouse</span><span class="p-facts">Banarasi satin, chaap, stitched blouse</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="silk"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Chaap%20Dyed%20Banarasi%20Satin%20with%20Stitched%20Blouse%20Concept.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/chaap-dyed-banarasi-satin-with-stiched-blouse-concept-w640.webp" alt="Chaap Dyed Banarasi Satin with Stitched Blouse Concept" width="640" height="960" loading="lazy" decoding="async"></span><span class="p-name">Chaap Dyed Banarasi Satin with Stitched Blouse Concept</span><span class="p-facts">Banarasi satin, chaap, stitched blouse</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="blouse"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Stitched%20Blouse%20Tussar%20and%20Rani.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/stitched-blouse-tussar-rani-w640.webp" alt="Stitched Blouse Tussar and Rani" width="640" height="854" loading="lazy" decoding="async"></span><span class="p-name">Stitched Blouse Tussar and Rani</span><span class="p-facts">Tussar, stitched blouse</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="blouse"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Stitched%20Blouse%20Triple%20Beads%20Concept.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/stitched-blouse-triple-beads-concept-w640.webp" alt="Stitched Blouse Triple Beads Concept" width="640" height="960" loading="lazy" decoding="async"></span><span class="p-name">Stitched Blouse Triple Beads Concept</span><span class="p-facts">Beads, stitched blouse</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Fancy%20Single%20Beads%20Work%20with%20Running%20Blouse.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/fancy-single-beads-work-with-running-blouse-w640.webp" alt="Fancy Single Beads Work with Running Blouse" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Fancy Single Beads Work with Running Blouse</span><span class="p-facts">Beads, running blouse</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Fancy%20Fabric%20Full%20Saree%20Heavy%20Jhadkan%20Work.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/fancy-fabric-full-saree-heavy-jhadkan-work-w640.webp" alt="Fancy Fabric Full Saree Heavy Jhadkan Work" width="640" height="854" loading="lazy" decoding="async"></span><span class="p-name">Fancy Fabric Full Saree Heavy Jhadkan Work</span><span class="p-facts">Fancy fabric, jhadkan</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="blouse"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Stitched%20Blouse%20Fendy%20Chiffon%20Foil%20Print.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/stitched-blouse-fendy-chiffon-foil-print-w640.webp" alt="Stitched Blouse Fendy Chiffon Foil Print" width="640" height="960" loading="lazy" decoding="async"></span><span class="p-name">Stitched Blouse Fendy Chiffon Foil Print</span><span class="p-facts">Chiffon, foil print, stitched blouse</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="print"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Mango%20Malai%20Viral.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/mango-malai-viral-w640.webp" alt="Mango Malai Viral" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Mango Malai Viral</span><span class="p-facts">Mango malai</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="blouse"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Stitched%20Blouse%20Fendy%20Satin%20Fancy.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/stitched-blouse-fendy-satin-fancy-w640.webp" alt="Stitched Blouse Fendy Satin Fancy" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Stitched Blouse Fendy Satin Fancy</span><span class="p-facts">Satin, stitched blouse</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Classy%20Border%20Blouse%20Saree%20on%20Fendy%20Satin%20with%20Heavy%20Running%20Blouse%20Full%20Saree%20Jhadkan.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/classy-border-blouse-saree-on-fendy-satin-with-heavy-running-blouse-full-saree-jhadkan-w640.webp" alt="Classy Border Blouse Saree on Fendy Satin with Heavy Running Blouse Full Saree Jhadkan" width="640" height="854" loading="lazy" decoding="async"></span><span class="p-name">Classy Border Blouse Saree on Fendy Satin with Heavy Running Blouse Full Saree Jhadkan</span><span class="p-facts">Satin, jhadkan, running blouse</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="blouse"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Stitched%20Blouse%20Multi%20Work%20with%20Jhadkan.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/stiched-blouse-multi-work-with-jhadkan-w640.webp" alt="Stitched Blouse Multi Work with Jhadkan" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Stitched Blouse Multi Work with Jhadkan</span><span class="p-facts">Jhadkan, stitched blouse</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Dyed%20Work%20Fancy%20with%20Heavy%20Border%20and%20Full%20Heavy%20Swarovski%20Saree.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/dyed-work-fancy-with-heavy-border-full-heavy-swaroski-saree-w640.webp" alt="Dyed Work Fancy with Heavy Border and Full Heavy Swarovski Saree" width="640" height="960" loading="lazy" decoding="async"></span><span class="p-name">Dyed Work Fancy with Heavy Border and Full Heavy Swarovski Saree</span><span class="p-facts">Swarovski</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="blouse"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Stitched%20Blouse%20Fendy%20Satin.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/stich-blouse-fandy-satin-w640.webp" alt="Stitched Blouse Fendy Satin" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Stitched Blouse Fendy Satin</span><span class="p-facts">Satin, stitched blouse</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="blouse"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Stitched%20Blouse%20Fancy%20Cording.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/stitched-blouse-fancy-cording-w640.webp" alt="Stitched Blouse Fancy Cording" width="640" height="854" loading="lazy" decoding="async"></span><span class="p-name">Stitched Blouse Fancy Cording</span><span class="p-facts">Cording, stitched blouse</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="brasso"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%2040x40%20Chiffon%20Raj%20Shree.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/40x40-chiffon-raj-shree-w640.webp" alt="40x40 Chiffon Raj Shree" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">40x40 Chiffon Raj Shree</span><span class="p-facts">Chiffon</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%204ss%20Jhadkan%20Work%20with%20Corner%20Butta%20on%20Fendy%20Chiffon.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/4ss-jhadkan-work-with-corner-butta-on-fendy-chiffon-w640.webp" alt="4ss Jhadkan Work with Corner Butta on Fendy Chiffon" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">4ss Jhadkan Work with Corner Butta on Fendy Chiffon</span><span class="p-facts">Chiffon, jhadkan, butta</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="silk"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%2050x600%20Silk%20Witty%20Full%20Saree%20Swarovski.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/50x600-silk-wity-full-saree-swaroski-w640.webp" alt="50x600 Silk Witty Full Saree Swarovski" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">50x600 Silk Witty Full Saree Swarovski</span><span class="p-facts">Silk, swarovski</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Burberry%20Crush%20Beads%20Work%20with%20Jhadkan%20Border.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/burberry-crush-beads-work-with-jhadkan-border-w640.webp" alt="Burberry Crush Beads Work with Jhadkan Border" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Burberry Crush Beads Work with Jhadkan Border</span><span class="p-facts">Jhadkan, beads</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="brasso"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Chiffon%20Brasso%20Ratan%20Priya.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/chiffon-brasso-ratan-priya-w640.webp" alt="Chiffon Brasso Ratan Priya" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Chiffon Brasso Ratan Priya</span><span class="p-facts">Chiffon</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="brasso"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Chiffon%20Brasso%20Shringar.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/chiffon-brasso-shringar-w640.webp" alt="Chiffon Brasso Shringar" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Chiffon Brasso Shringar</span><span class="p-facts">Chiffon</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="print"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Digital%20Print%20Weightless.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/digital-print-weightless-w640.webp" alt="Digital Print Weightless" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Digital Print Weightless</span><span class="p-facts">Weightless, digital print</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Dull%20Moss%20Jeevan%20Sathi.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/dull-moss-jeevan-sathi-w640.webp" alt="Dull Moss Jeevan Sathi" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Dull Moss Jeevan Sathi</span><span class="p-facts">Moss</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Dull%20Moss%20Mello%20Fancy%20Pattern%20Border.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/dull-moss-mello-fancy-pattern-border-w640.webp" alt="Dull Moss Mello Fancy Pattern Border" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Dull Moss Mello Fancy Pattern Border</span><span class="p-facts">Moss</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Fancy%20Fendy%20Chiffon%20Jari%20C-Pallu%20with%20Swarovski.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/fancy-fendy-chiffon-jari-c-pallu-with-swaroski-w640.webp" alt="Fancy Fendy Chiffon Jari C-Pallu with Swarovski" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Fancy Fendy Chiffon Jari C-Pallu with Swarovski</span><span class="p-facts">Chiffon, swarovski, zari</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="print"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Fancy%20Weightless%20Lehariya.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/fancy-weightless-lehariya-w640.webp" alt="Fancy Weightless Lehariya" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Fancy Weightless Lehariya</span><span class="p-facts">Weightless, lehariya</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="silk"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Fendy%20Satin%20Digital%20Print%20Full%20Saree%20Swarovski%20Work.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/fabrics-fandy-satin-digital-print-full-saree-siroski-work-w640.webp" alt="Fendy Satin Digital Print Full Saree Swarovski Work" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Fendy Satin Digital Print Full Saree Swarovski Work</span><span class="p-facts">Satin, swarovski, digital print</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20H.O.%209%20Colour%20Embroidery%2C%20Cording%2C%20Sequence%20and%20Jhadkan%20Heavy%20Blouse.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/fabric-h-o-9-colour-emb-cording-sequence-jhadkan-work-heavy-blouse-w640.webp" alt="H.O. 9 Colour Embroidery, Cording, Sequence and Jhadkan Heavy Blouse" width="640" height="869" loading="lazy" decoding="async"></span><span class="p-name">H.O. 9 Colour Embroidery, Cording, Sequence and Jhadkan Heavy Blouse</span><span class="p-facts">Jhadkan, cording, stitched blouse</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="print"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Heavy%20Georgette%20Print.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/heavy-georgette-print-w640.webp" alt="Heavy Georgette Print" width="640" height="876" loading="lazy" decoding="async"></span><span class="p-name">Heavy Georgette Print</span><span class="p-facts">Georgette, print</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Heavy%20Net%20Moti%20and%20Beads%20Hand%20Work%20Full%20Saree%20Latkhan%20Border%20%28D-11391%29.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/fabrics-heavy-net-moti-bids-hand-work-full-saree-latkhan-border-d-11391-w640.webp" alt="Heavy Net Moti and Beads Hand Work Full Saree Latkhan Border (D-11391)" width="640" height="426" loading="lazy" decoding="async"></span><span class="p-name">Heavy Net Moti and Beads Hand Work Full Saree Latkhan Border (D-11391)</span><span class="p-facts">Net, latkhan, beads</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="print"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Heavy%20Rennial%20Print.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/heavy-renial-print-w640.webp" alt="Heavy Rennial Print" width="640" height="876" loading="lazy" decoding="async"></span><span class="p-name">Heavy Rennial Print</span><span class="p-facts">Rennial, print</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Heavy%20Vetless%20Apeksha.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/heavy-vetless-apeksha-w640.webp" alt="Heavy Vetless Apeksha" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Heavy Vetless Apeksha</span><span class="p-facts">Vetless</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Heavy%20Vetless%20Dil%20Kushi.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/heavy-vetless-dil-kushi-w640.webp" alt="Heavy Vetless Dil Kushi" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Heavy Vetless Dil Kushi</span><span class="p-facts">Vetless</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Heavy%20Vetless%20Good%20Luck.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/heavy-vetless-good-luck-w640.webp" alt="Heavy Vetless Good Luck" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Heavy Vetless Good Luck</span><span class="p-facts">Vetless</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Heavy%20Vetless%20Pushp%20Varsha.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/heavy-vetless-pushp-varsha-w640.webp" alt="Heavy Vetless Pushp Varsha" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Heavy Vetless Pushp Varsha</span><span class="p-facts">Vetless</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Iconic.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/fabric-iconic-w640.webp" alt="Iconic" width="640" height="841" loading="lazy" decoding="async"></span><span class="p-name">Iconic</span><span class="p-facts">&nbsp;</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="print"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Mango%20Malai%20Ajrakh%20Print.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/mango-malai-ajrakh-print-w640.webp" alt="Mango Malai Ajrakh Print" width="640" height="542" loading="lazy" decoding="async"></span><span class="p-name">Mango Malai Ajrakh Print</span><span class="p-facts">Mango malai, ajrakh print</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="print"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Mango%20Malai%20Digital%20Print%20Trending.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/mango-malai-digital-print-trending-w640.webp" alt="Mango Malai Digital Print Trending" width="640" height="616" loading="lazy" decoding="async"></span><span class="p-name">Mango Malai Digital Print Trending</span><span class="p-facts">Mango malai, digital print</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="print"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Mango%20Malai%20Position%20Print.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/mango-malai-position-print-w640.webp" alt="Mango Malai Position Print" width="640" height="512" loading="lazy" decoding="async"></span><span class="p-name">Mango Malai Position Print</span><span class="p-facts">Mango malai, print</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="brasso"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Moss%20Brasso%20Flower%20Queen.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/moss-brasso-flower-queen-w640.webp" alt="Moss Brasso Flower Queen" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Moss Brasso Flower Queen</span><span class="p-facts">Brasso</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="brasso"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Moss%20Brasso%20Neel%20Kamal.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/moss-brasso-neel-kamal-w640.webp" alt="Moss Brasso Neel Kamal" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Moss Brasso Neel Kamal</span><span class="p-facts">Brasso</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="brasso"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Moss%20Brasso%20Pakiza.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/moss-brasso-pakiza-w640.webp" alt="Moss Brasso Pakiza" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Moss Brasso Pakiza</span><span class="p-facts">Brasso</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="brasso"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Moss%20Brasso%20Suhag%20Joda.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/moss-brasso-suhag-joda-w640.webp" alt="Moss Brasso Suhag Joda" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Moss Brasso Suhag Joda</span><span class="p-facts">Brasso</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="brasso"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Moss%20Brasso%20Suhane%20Pal.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/moss-brasso-suhane-pal-w640.webp" alt="Moss Brasso Suhane Pal" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Moss Brasso Suhane Pal</span><span class="p-facts">Brasso</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="brasso"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Moss%20Brasso%20Toshiba.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/moss-brasso-toshiba-w640.webp" alt="Moss Brasso Toshiba" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Moss Brasso Toshiba</span><span class="p-facts">Brasso</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Moss%20Mellow%20Mangaldeep.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/moss-mellow-mangaldeep-w640.webp" alt="Moss Mellow Mangaldeep" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Moss Mellow Mangaldeep</span><span class="p-facts">Moss</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="brasso"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Organza%20Brasso%20Aashopallav.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/organja-brasso-aashopallav-w640.webp" alt="Organza Brasso Aashopallav" width="640" height="876" loading="lazy" decoding="async"></span><span class="p-name">Organza Brasso Aashopallav</span><span class="p-facts">Organza</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="silk"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Organza%20Copper%20Silk%20Heavy.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/organza-copper-silk-heavy-w640.webp" alt="Organza Copper Silk Heavy" width="640" height="427" loading="lazy" decoding="async"></span><span class="p-name">Organza Copper Silk Heavy</span><span class="p-facts">Silk</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="silk"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Satin%20Meena%20Silk%20with%20Full%20Saree%20Swarovski%20Work.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/satin-meena-silk-with-full-saree-swarorki-work-w640.webp" alt="Satin Meena Silk with Full Saree Swarovski Work" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Satin Meena Silk with Full Saree Swarovski Work</span><span class="p-facts">Satin, swarovski</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="silk"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Satin%20Silk%20Sarees%20with%20Full%20Saree%20Swarovski.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/satin-silk-sarees-with-full-saree-swaroski-w640.webp" alt="Satin Silk Sarees with Full Saree Swarovski" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Satin Silk Sarees with Full Saree Swarovski</span><span class="p-facts">Satin, swarovski</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="print"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Spray%20Print%20Fendy%20Chiffon%20Full%20Saree%20Swarovski.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/spray-print-fendy-chiffon-full-saree-swaroski-w640.webp" alt="Spray Print Fendy Chiffon Full Saree Swarovski" width="640" height="554" loading="lazy" decoding="async"></span><span class="p-name">Spray Print Fendy Chiffon Full Saree Swarovski</span><span class="p-facts">Chiffon, swarovski, print</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Star%20Georgette%20Jari%20Border%20with%20Swarovski.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/star-georgette-jari-border-with-swaroski-w640.webp" alt="Star Georgette Jari Border with Swarovski" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Star Georgette Jari Border with Swarovski</span><span class="p-facts">Georgette, swarovski, zari</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="blouse"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Stitched%20Blouse%20Tesla.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/stich-blouse-tesla-w640.webp" alt="Stitched Blouse Tesla" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Stitched Blouse Tesla</span><span class="p-facts">Stitched blouse</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="brasso"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Tore%20Brasso%20Dream%20Pari.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/tore-brasso-dream-pari-w640.webp" alt="Tore Brasso Dream Pari" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Tore Brasso Dream Pari</span><span class="p-facts">Brasso</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="brasso"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Tore%20Brasso%20Hotstar.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/tore-brasso-hotstar-w640.webp" alt="Tore Brasso Hotstar" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Tore Brasso Hotstar</span><span class="p-facts">Brasso</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Twill%20Gabbana%20Fancy%20Multi%20and%20Cording%20Full%20Saree%20Jhadkan%20Heavy%20Blouse.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/fabrics-twill-gabbana-fancy-multi-cording-full-saree-jharkhan-heavy-blouse-w640.webp" alt="Twill Gabbana Fancy Multi and Cording Full Saree Jhadkan Heavy Blouse" width="640" height="997" loading="lazy" decoding="async"></span><span class="p-name">Twill Gabbana Fancy Multi and Cording Full Saree Jhadkan Heavy Blouse</span><span class="p-facts">Twill, jhadkan, cording, stitched blouse</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="print"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Vetless%20Himpriya.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/vetless-himpriya-w640.webp" alt="Vetless Himpriya" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Vetless Himpriya</span><span class="p-facts">Vetless</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Vetless%20Madhuram.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/vetless-madhuram-w640.webp" alt="Vetless Madhuram" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Vetless Madhuram</span><span class="p-facts">Vetless</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="print"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Weightless%20Bandhani%20Print.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/weightless-bandhani-print-w640.webp" alt="Weightless Bandhani Print" width="640" height="853" loading="lazy" decoding="async"></span><span class="p-name">Weightless Bandhani Print</span><span class="p-facts">Weightless, bandhani print</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="print"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Weightless%20Digital%20Print%20Full%20Saree%20Swarovski%20Border.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/weightless-digital-print-full-saree-swaroski-broder-w640.webp" alt="Weightless Digital Print Full Saree Swarovski Border" width="640" height="512" loading="lazy" decoding="async"></span><span class="p-name">Weightless Digital Print Full Saree Swarovski Border</span><span class="p-facts">Weightless, swarovski, digital print</span><span class="p-ask">Order on WhatsApp</span></a></li>
+        <li class="p" data-range="dyed"><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%3A%20Zomato%20Shirmili.%20Please%20share%20the%20price%20and%20colours." target="_blank" rel="noopener"><span class="p-img"><img src="images/products/zomato-shirmili-w640.webp" alt="Zomato Shirmili" width="640" height="876" loading="lazy" decoding="async"></span><span class="p-name">Zomato Shirmili</span><span class="p-facts">&nbsp;</span><span class="p-ask">Order on WhatsApp</span></a></li>
+    </ul>
+    <p class="none" id="none" hidden>Nothing in this range today. <a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20am%20looking%20for%20a%20design." target="_blank" rel="noopener">Ask us on WhatsApp</a>.</p>
+    <div class="more-wrap"><button type="button" class="more" id="more">Show all 60 designs</button></div>
+  </section>
+
+  <!-- order on WhatsApp: the page's one job -->
+  <section class="sec wa" id="order" aria-labelledby="wa-h">
+    <div class="wa-text">
+      <h2 id="wa-h" class="h2" data-rise>Order on WhatsApp</h2>
+      <p class="sec-lead" data-rise>Our whole catalogue lives on WhatsApp. Open it, pick a design and send us a message for the price and colours. Retail and wholesale, delivered across India.</p>
+      <ul class="wa-steps">
+        <li data-rise><h3>Open the catalogue</h3><p>Every set from Surat, with photographs, in WhatsApp.</p></li>
+        <li data-rise><h3>Pick a design</h3><p>Tap the one you like and send it to us in the chat.</p></li>
+        <li data-rise><h3>Confirm your order</h3><p>We share the price, colours and delivery, and you pay to confirm.</p></li>
+      </ul>
+      <div class="acts" data-rise>
+        <a class="btn btn-wa" href="https://wa.me/c/917211172105" target="_blank" rel="noopener"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.6c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A7.9 7.9 0 1 1 12 19.8zm4.4-5.9c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4.2-.4c.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1l-.5-.2z"/></svg>Open the WhatsApp catalogue</a>
+        <a class="tlink" href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20would%20like%20to%20order%20a%20saree." target="_blank" rel="noopener">Or chat with us: +91 72111 72105</a>
+      </div>
+    </div>
+    <figure class="wa-qr" data-rise>
+      <img src="media/whatsapp-catalogue-qr.svg" width="264" height="264" alt="QR code that opens the Surya Sarees catalogue on WhatsApp" loading="lazy" decoding="async">
+      <figcaption>On a computer? Scan with your phone to open the catalogue in WhatsApp.</figcaption>
+    </figure>
+  </section>
+
+  <!-- why Surya Sarees -->
+  <section class="sec order craft" id="about" aria-labelledby="about-h">
+    <div class="order-text">
+      <h2 id="about-h" class="h2" data-rise>Three decades of craft</h2>
+      <ul class="steps">
+        <li data-rise><h3>Three decades of weaving</h3><p>35+ years of trusted saree craftsmanship from Surat, since 1988.</p></li>
+        <li data-rise><h3>Retail and wholesale</h3><p>Shop single pieces, or enquire for bulk wholesale orders.</p></li>
+        <li data-rise><h3>Pan-India delivery</h3><p>Free shipping to customers and retailers across India.</p></li>
+      </ul>
+      <a class="btn btn-wa" href="https://wa.me/c/917211172105" target="_blank" rel="noopener" data-rise><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.6c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A7.9 7.9 0 1 1 12 19.8zm4.4-5.9c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4.2-.4c.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1l-.5-.2z"/></svg>Shop the WhatsApp catalogue</a>
+    </div>
+    <figure class="order-pic"><img src="media/chaap-loop.jpg" width="1280" height="720" alt="Model in a red chaap dyed Banarasi satin saree by a white brick wall" decoding="async"></figure>
+  </section>
+
+  <!-- Instagram -->
+  <section class="sec ig" id="instagram" aria-labelledby="ig-h">
+    <div class="sec-head" data-rise>
+      <h2 id="ig-h" class="h2">Follow us on Instagram</h2>
+      <p class="sec-lead">See new sets as they arrive from Surat at <a class="tlink" href="https://instagram.com/surya_sarees_surat" target="_blank" rel="noopener">@surya_sarees_surat</a>.</p>
+    </div>
+    <ul class="ig-grid">
+      <li data-rise><a href="https://instagram.com/surya_sarees_surat" target="_blank" rel="noopener" aria-label="Surya Sarees on Instagram"><img src="images/products/banarasi-satin-chaap-with-fancy-stitched-blouse-w640.webp" alt="Banarasi Satin Chaap with Fancy Stitched Blouse" width="640" height="853" loading="lazy" decoding="async"></a></li>
+      <li data-rise><a href="https://instagram.com/surya_sarees_surat" target="_blank" rel="noopener" aria-label="Surya Sarees on Instagram"><img src="images/products/chaap-dyed-banarasi-satin-with-stiched-blouse-concept-w640.webp" alt="Chaap Dyed Banarasi Satin with Stitched Blouse Concept" width="640" height="960" loading="lazy" decoding="async"></a></li>
+      <li data-rise><a href="https://instagram.com/surya_sarees_surat" target="_blank" rel="noopener" aria-label="Surya Sarees on Instagram"><img src="images/products/stitched-blouse-tussar-rani-w640.webp" alt="Stitched Blouse Tussar and Rani" width="640" height="854" loading="lazy" decoding="async"></a></li>
+      <li data-rise><a href="https://instagram.com/surya_sarees_surat" target="_blank" rel="noopener" aria-label="Surya Sarees on Instagram"><img src="images/products/stitched-blouse-triple-beads-concept-w640.webp" alt="Stitched Blouse Triple Beads Concept" width="640" height="960" loading="lazy" decoding="async"></a></li>
+      <li data-rise><a href="https://instagram.com/surya_sarees_surat" target="_blank" rel="noopener" aria-label="Surya Sarees on Instagram"><img src="images/products/fancy-single-beads-work-with-running-blouse-w640.webp" alt="Fancy Single Beads Work with Running Blouse" width="640" height="853" loading="lazy" decoding="async"></a></li>
+      <li data-rise><a href="https://instagram.com/surya_sarees_surat" target="_blank" rel="noopener" aria-label="Surya Sarees on Instagram"><img src="images/products/fancy-fabric-full-saree-heavy-jhadkan-work-w640.webp" alt="Fancy Fabric Full Saree Heavy Jhadkan Work" width="640" height="854" loading="lazy" decoding="async"></a></li>
+    </ul>
+    <div class="acts ig-acts" data-rise><a class="btn" href="https://instagram.com/surya_sarees_surat" target="_blank" rel="noopener">Follow @surya_sarees_surat</a></div>
+  </section>
+
+  <!-- wholesale -->
+  <section class="sec whole" id="wholesale" aria-labelledby="whole-h">
+    <figure class="whole-pic"><img src="media/banarasi-loop.jpg" width="1280" height="720" alt="Model in a red Banarasi satin chaap saree against a warm plaster wall" decoding="async"></figure>
+    <div class="whole-text">
+      <h2 id="whole-h" class="h2" data-rise>Wholesale enquiries</h2>
+      <p class="sec-lead" data-rise>For retailers and resellers. Buying in bulk? Get in touch with our wholesale team for catalogues, pricing and minimum order details.</p>
+      <dl class="facts" data-rise>
+        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20have%20a%20wholesale%20enquiry." target="_blank" rel="noopener">+91 72111 72105</a></dd></div>
+        <div><dt>Call</dt><dd><a href="tel:+917211172105">+91 72111 72105</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:wholesale@suryasarees.com">wholesale@suryasarees.com</a></dd></div>
+        <div><dt>Address</dt><dd>Surya Sarees, Surat, Gujarat 395003</dd></div>
+      </dl>
+      <div class="acts" data-rise>
+        <a class="btn btn-wa" href="https://wa.me/917211172105?text=Hello%20Surya%20Sarees%2C%20I%20have%20a%20wholesale%20enquiry.%20Please%20share%20your%20catalogue%20sets%20and%20minimum%20order%20details." target="_blank" rel="noopener"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.6c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A7.9 7.9 0 1 1 12 19.8zm4.4-5.9c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4.2-.4c.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1l-.5-.2z"/></svg>WhatsApp the wholesale team</a>
+        <a class="tlink" href="mailto:wholesale@suryasarees.com?subject=Wholesale%20enquiry&amp;body=Shop%20name%3A%0ACity%3A%0AWhatsApp%20number%3A%0AFabrics%20we%20stock%3A%0AQuantity%20per%20design%3A%0A">Or email us</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p class="foot-name" data-rise>Surya Sarees</p>
+  <div class="foot-row">
+    <p>Retail and wholesale sarees, lehengas and suits. Surat, Gujarat, India, est. 1988.</p>
+    <p class="foot-contact"><a href="https://wa.me/c/917211172105" target="_blank" rel="noopener">WhatsApp +91 72111 72105</a><a href="https://instagram.com/surya_sarees_surat" target="_blank" rel="noopener">Instagram @surya_sarees_surat</a></p>
+    <nav class="foot-links" aria-label="Footer"><a href="#collections">Collections</a><a href="#catalogue">Full catalogue</a><a href="#about">About</a><a href="#wholesale">Wholesale</a><a href="#order">Order on WhatsApp</a></nav>
+    <p class="foot-copy">© 2026 Surya Sarees. All rights reserved.</p>
+  </div>
+</footer>
+<a class="wa-float" id="waFloat" href="https://wa.me/c/917211172105" target="_blank" rel="noopener" aria-label="Order on WhatsApp"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.6c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A7.9 7.9 0 1 1 12 19.8zm4.4-5.9c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4.2-.4c.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1l-.5-.2z"/></svg><span>Order on WhatsApp</span></a>
+<!-- PAGE:END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function () {
+  'use strict';
+
+  var WA = '917211172105'; // Surya Sarees WhatsApp Business
+  var DROP_MS = 1150;
+  var READY_TIMEOUT = 12000;
+  var LOOKS = {
+    base: { name: 'Banarasi Satin Chaap with Fancy Stitched Blouse', alt: 'Model in a red Banarasi satin chaap saree with a turquoise border, against a warm plaster wall' },
+    chaap: { label: 'Chaap dyed', name: 'Chaap Dyed Banarasi Satin with Stitched Blouse Concept', alt: 'Model in a red chaap dyed Banarasi satin saree with a green border, standing by a white brick wall' },
+    beads: { label: 'Beadwork', name: 'Stitched Blouse Triple Beads Concept', alt: 'Teal saree with a triple-beads stitched blouse' },
+    foil: { label: 'Foil print', name: 'Stitched Blouse Fendy Chiffon Foil Print', alt: 'Blue fendy chiffon saree with foil print and a stitched blouse' },
+    jhadkan: { label: 'Jhadkan', name: 'Stitched Blouse Multi Work with Jhadkan', alt: 'Bottle-green satin saree with a multi-work blouse and jhadkan border' }
+  };
+
+  var stage = document.getElementById('stage');
+  var controller = document.getElementById('controller');
+  var probe = document.getElementById('probe');
+  var statusEl = document.getElementById('status');
+  var notice = document.getElementById('notice');
+  var noticeText = document.getElementById('noticeText');
+  var retryBtn = document.getElementById('retry');
+  var lookName = document.getElementById('lookName');
+  var lookAsk = document.getElementById('lookAsk');
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.opt'));
+  var CAP = [['-5px', 'calc(20% + 5px)'], ['20%', '20%'], ['40%', '20%'], ['60%', '20%'], ['80%', 'calc(20% + 5px)']];
+
+  function wa(text) { return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(text); }
+  document.getElementById('orderLink').href = 'https://wa.me/c/917211172105';
+
+  var state = { scene: 'base', playback: 'loading', direction: 'forward' };
+  var locked = false, token = 0, chosenBtn = null, failed = null, timers = [];
+  var ready = {};
+  var layers = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.look'), function (el) { layers[el.getAttribute('data-look')] = el; });
+  var visible = layers.base;
+  visible.querySelector('img').alt = LOOKS.base.alt;
+
+  function say(m) { statusEl.textContent = m; }
+  function later(fn, ms) { var id = setTimeout(fn, ms); timers.push(id); return id; }
+  function clearTimers() { timers.forEach(clearTimeout); timers = []; }
+
+  // ---- capsule (custom properties only) ----
+  function setCap(i) {
+    controller.style.setProperty('--cap-left', CAP[i][0]);
+    controller.style.setProperty('--cap-width', CAP[i][1]);
+    controller.classList.toggle('hl', i > 0);
+  }
+  function focusedIndex() { var i = buttons.indexOf(document.activeElement); return i > -1 ? i + 1 : 0; }
+  function expanded() { return !controller.classList.contains('collapsed'); }
+  buttons.forEach(function (b, i) {
+    b.addEventListener('pointerenter', function () { if (expanded() && !locked) setCap(i + 1); });
+    b.addEventListener('focus', function () { if (expanded() && !locked) setCap(i + 1); });
+    b.addEventListener('blur', function () { if (expanded()) setTimeout(function () { setCap(focusedIndex()); }, 0); });
+    b.addEventListener('click', function () { onActivate(b); });
+  });
+  controller.addEventListener('pointerleave', function () { if (expanded()) setCap(focusedIndex()); });
+  controller.addEventListener('pointermove', function (e) {
+    var r = controller.getBoundingClientRect();
+    controller.style.setProperty('--glass-x', (((e.clientX - r.left) / r.width) * 100).toFixed(1) + '%');
+    controller.style.setProperty('--glass-y', (((e.clientY - r.top) / r.height) * 100).toFixed(1) + '%');
+  });
+
+  function syncControls() {
+    buttons.forEach(function (b) {
+      var key = b.getAttribute('data-key');
+      if (state.scene === 'base') {
+        b.removeAttribute('aria-hidden'); b.removeAttribute('tabindex'); b.removeAttribute('aria-label');
+        b.disabled = locked || !ready[key] || !ready.base;
+      } else if (b === chosenBtn) {
+        b.removeAttribute('aria-hidden'); b.removeAttribute('tabindex'); b.setAttribute('aria-label', 'Reset to the first look');
+        b.disabled = locked;
+      } else {
+        b.disabled = true; b.setAttribute('aria-hidden', 'true'); b.setAttribute('tabindex', '-1');
+      }
+    });
+    lookAsk.setAttribute('tabindex', state.scene === 'base' || locked ? '-1' : '0');
+  }
+  function lockAll() { locked = true; buttons.forEach(function (b) { b.disabled = true; }); }
+
+  function placeChosen() {
+    if (!chosenBtn) return;
+    chosenBtn.style.transform = '';
+    var p = probe.getBoundingClientRect(), b = chosenBtn.getBoundingClientRect();
+    chosenBtn.style.transform = 'translate(' + ((p.left + p.width / 2) - (b.left + b.width / 2)).toFixed(1) + 'px,' + ((p.top + p.height / 2) - (b.top + b.height / 2)).toFixed(1) + 'px)';
+  }
+  window.addEventListener('resize', function () {
+    if (controller.classList.contains('collapsed') && chosenBtn) {
+      var t = chosenBtn.style.transition; chosenBtn.style.transition = 'none';
+      placeChosen(); void chosenBtn.offsetWidth; chosenBtn.style.transition = t;
+    }
+  });
+  function collapseUI(btn) {
+    chosenBtn = btn; btn.classList.add('is-chosen');
+    controller.classList.remove('restoring', 'hl');
+    controller.classList.add('collapsed', 'rear-faded'); // same recalc: the CSS delay does the waiting
+    placeChosen();
+  }
+  function expandUI() {
+    controller.classList.add('restoring');
+    controller.classList.remove('collapsed', 'rear-faded');
+    setCap(0);
+    if (chosenBtn) { chosenBtn.classList.remove('is-reset'); chosenBtn.style.transform = ''; }
+  }
+  function restoreFocus(btn, had) { if (had && btn) { try { btn.focus({ preventScroll: true }); } catch (e) { btn.focus(); } } }
+
+  function onActivate(btn) {
+    if (locked || state.playback === 'loading') return;
+    if (state.scene === 'base') startForward(btn);
+    else if (btn === chosenBtn && btn.classList.contains('is-reset')) startReverse();
+  }
+
+  function startForward(btn) {
+    var key = btn.getAttribute('data-key');
+    if (!ready[key]) return;
+    var had = document.activeElement === btn;
+    lockAll();
+    var t = ++token;
+    notice.hidden = true;
+    state.direction = 'forward'; state.playback = 'starting';
+    collapseUI(btn);
+    if (films[key]) films[key].rewind();
+    lookName.textContent = LOOKS[key].name + '.';
+    lookAsk.href = wa('Hello Surya Sarees, I would like to order: ' + LOOKS[key].name + '. Please share the price and colours.');
+    say('Changing to ' + LOOKS[key].label + '…');
+    later(function () { if (t === token) stage.classList.add('title-hidden'); }, Math.min(DROP_MS * 0.12, 900));
+    drape(layers[key], 'from-top', t).then(function () {
+      if (t !== token) return;
+      state.scene = key; state.playback = 'ready';
+      stage.classList.add('has-look');
+      films.base.stop();
+      if (films[key]) films[key].start();
+      btn.classList.add('is-reset');
+      locked = false; syncControls(); restoreFocus(btn, had);
+      say(LOOKS[key].name + '. Press Reset to return.');
+    }, function (err) { if (t === token) fail(key, 'forward', err, had); });
+  }
+
+  function startReverse() {
+    var btn = chosenBtn, key = btn.getAttribute('data-key');
+    var had = document.activeElement === btn;
+    lockAll();
+    var t = ++token;
+    notice.hidden = true;
+    state.direction = 'reverse'; state.playback = 'starting';
+    expandUI();
+    stage.classList.remove('has-look');
+    films.base.start();
+    say('Returning to the first look…');
+    drape(layers.base, 'from-bottom', t).then(function () {
+      if (t !== token) return;
+      state.scene = 'base'; state.playback = 'ready';
+      if (films[key]) films[key].stop();
+      btn.classList.remove('is-chosen'); chosenBtn = null;
+      controller.classList.remove('restoring');
+      stage.classList.remove('title-hidden');
+      locked = false; syncControls(); restoreFocus(btn, had); setCap(focusedIndex());
+      say('First look.');
+    }, function (err) { if (t === token) fail(key, 'reverse', err, had); });
+  }
+
+  function fail(key, direction, err, had) {
+    clearTimers();
+    state.playback = 'error'; failed = { key: key, direction: direction };
+    var btn = document.querySelector('.opt[data-key="' + key + '"]');
+    if (direction === 'forward') {
+      expandUI(); btn.classList.remove('is-chosen'); chosenBtn = null;
+      controller.classList.remove('restoring'); stage.classList.remove('title-hidden', 'has-look'); state.scene = 'base';
+    } else {
+      controller.classList.remove('restoring'); collapseUI(btn); btn.classList.add('is-reset');
+      stage.classList.add('has-look'); state.scene = key;
+    }
+    locked = false; syncControls(); restoreFocus(btn, had);
+    var msg = direction === 'forward' ? 'That look could not load.' : 'Could not return to the first look.';
+    noticeText.textContent = msg; notice.hidden = false; say(msg + ' Retry is available.');
+    if (window.console && err) console.warn('[Surya] transition failed:', err.message || err);
+  }
+  retryBtn.addEventListener('click', function () {
+    if (!failed || locked) return;
+    var f = failed; failed = null;
+    var btn = document.querySelector('.opt[data-key="' + f.key + '"]');
+    if (f.direction === 'forward' && state.scene === 'base') startForward(btn);
+    else if (f.direction === 'reverse' && chosenBtn === btn) startReverse();
+  });
+
+  // ---- the drape: reveal only a decoded picture; switch layers atomically when it lands ----
+  function decoded(img) {
+    if (img.complete && img.naturalWidth > 0 && !img.decode) return Promise.resolve();
+    return new Promise(function (resolve, reject) {
+      var to = setTimeout(function () { reject(new Error('Image did not decode in time')); }, READY_TIMEOUT);
+      function ok() { clearTimeout(to); resolve(); }
+      function bad() { clearTimeout(to); reject(new Error('Image failed to load')); }
+      if (img.decode) img.decode().then(ok, function () { if (img.complete && img.naturalWidth > 0) ok(); else img.addEventListener('load', ok, { once: true }); });
+      else if (img.complete && img.naturalWidth > 0) ok();
+      else { img.addEventListener('load', ok, { once: true }); img.addEventListener('error', bad, { once: true }); }
+    });
+  }
+  function drape(layer, from, t) {
+    var img = layer.querySelector('img');
+    return decoded(img).then(function () {
+      if (t !== token) throw new Error('stale');
+      return new Promise(function (resolve) {
+        layer.classList.remove('dropped', 'from-top', 'from-bottom');
+        layer.classList.add('is-entering', from);
+        void layer.offsetWidth;                     // commit the start state
+        requestAnimationFrame(function () {
+          if (t !== token) return;
+          state.playback = 'playing';
+          layer.classList.add('dropped');
+          var finished = false;
+          function land() {
+            if (finished || t !== token) return;
+            finished = true;
+            layer.removeEventListener('transitionend', onEnd);
+            layer.classList.add('is-visible');      // atomic: new layer on, old layer off
+            if (visible && visible !== layer) visible.classList.remove('is-visible');
+            layer.classList.remove('is-entering', from, 'dropped');
+            visible = layer;
+            resolve();
+          }
+          function onEnd(e) { if (e.target === layer && e.propertyName === 'clip-path') land(); }
+          layer.addEventListener('transitionend', onEnd);
+          later(land, DROP_MS + 120);               // fallback if transitionend never arrives
+        });
+      });
+    });
+  }
+
+  // ---- films: the opening plays once, then a calm stretch loops through a crossfade between two copies ----
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var XFADE = 0.45;   // short, so the join never shows a doubled face
+  function quietPlay(v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+  function Film(layer, loopIn, loopOut) {
+    var vids = Array.prototype.slice.call(layer.querySelectorAll('video'));
+    var front = 0, on = false, raf = 0, swapping = false;
+    function arm(v) { if (!v.armed && v.readyState >= 1) { v.armed = true; try { v.currentTime = loopIn; } catch (e) {} } }
+    function tick() {
+      if (!on) return;
+      var v = vids[front], o = vids[1 - front];
+      arm(o);
+      if (!swapping && o.armed && v.currentTime >= loopOut - XFADE) {
+        swapping = true;
+        o.addEventListener('playing', function once() {
+          o.removeEventListener('playing', once);
+          o.classList.add('front'); v.classList.remove('front');
+          setTimeout(function () { v.pause(); v.armed = false; front = 1 - front; swapping = false; }, XFADE * 1000 + 60);
+        });
+        quietPlay(o);
+      }
+      raf = requestAnimationFrame(tick);
+    }
+    vids.forEach(function (v) {
+      // if a swap was refused, loop the front copy hard rather than freeze on the last frame
+      v.addEventListener('ended', function () { if (on && v === vids[front]) { v.currentTime = loopIn; quietPlay(v); } });
+      if (reduce) { v.classList.remove('front'); v.removeAttribute('preload'); }
+    });
+    return {
+      start: function () { if (reduce || on) return; on = true; quietPlay(vids[front]); tick(); },
+      stop: function () { on = false; cancelAnimationFrame(raf); swapping = false; vids.forEach(function (v) { v.pause(); }); },
+      // back to the opening frame; only ever called while the layer is hidden
+      rewind: function () {
+        this.stop(); front = 0;
+        vids.forEach(function (v, i) { v.armed = false; v.classList.toggle('front', i === 0 && !reduce); });
+        try { vids[0].currentTime = 0; } catch (e) {}
+      },
+      pause: function () { if (on) vids.forEach(function (v) { v.pause(); }); },
+      resume: function () { if (on) quietPlay(vids[front]); }
+    };
+  }
+  var films = { base: Film(layers.base, 6.96, 9.96), chaap: Film(layers.chaap, 5.79, 9.875) };
+  document.addEventListener('visibilitychange', function () {
+    Object.keys(films).forEach(function (k) { if (document.hidden) films[k].pause(); else films[k].resume(); });
+  });
+
+  // ---- readiness ----
+  Object.keys(layers).forEach(function (key) {
+    var img = layers[key].querySelector('img');
+    if (key !== 'base') img.alt = LOOKS[key].alt;
+    decoded(img).then(function () {
+      ready[key] = true;
+      if (key === 'base' && state.playback === 'loading') { state.playback = 'ready'; say('Ready. Choose a look.'); films.base.start(); }
+      if (!locked && state.scene === 'base') syncControls();
+    }, function () {
+      if (key === 'base') { noticeText.textContent = 'The page could not load its pictures.'; notice.hidden = false; }
+    });
+  });
+
+  // the curtain has done its job once it lifts: take it out of the page
+  var curtain = document.querySelector('.curtain');
+  if (curtain) {
+    curtain.addEventListener('animationend', function () { curtain.parentNode.removeChild(curtain); });
+    if (reduce) curtain.parentNode.removeChild(curtain);
+  }
+
+  setCap(0);
+  syncControls();
+})();
+</script>
+<script>
+/* PAGE-JS:START */
+(function () {
+  'use strict';
+  document.documentElement.classList.add('js');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // catalogue: fabric filter, and the first 16 until the visitor asks for all
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.p'));
+  var chips = document.querySelectorAll('.chip');
+  var count = document.getElementById('count');
+  var none = document.getElementById('none');
+  var more = document.getElementById('more');
+  var LIMIT = 16, all = false, pick = 'all';
+  function names(k) { for (var i = 0; i < chips.length; i++) if (chips[i].getAttribute('data-f') === k) return chips[i].textContent.toLowerCase(); return ''; }
+  function render(fromClick) {
+    var shown = cards.filter(function (c) { return pick === 'all' || c.getAttribute('data-range') === pick; });
+    cards.forEach(function (c) { c.hidden = true; });
+    shown.forEach(function (c, i) { c.hidden = !all && i >= LIMIT; if (fromClick && !c.hidden) c.classList.add('in'); });
+    none.hidden = shown.length > 0;
+    more.parentNode.hidden = all || shown.length <= LIMIT;
+    more.textContent = 'Show all ' + shown.length + ' designs';
+    count.textContent = pick === 'all' ? 'All ' + shown.length + ' designs' : shown.length + (shown.length === 1 ? ' design' : ' designs') + ' in ' + names(pick);
+  }
+  Array.prototype.forEach.call(chips, function (ch) {
+    ch.addEventListener('click', function () {
+      pick = ch.getAttribute('data-f'); all = false;
+      Array.prototype.forEach.call(chips, function (x) { x.setAttribute('aria-pressed', String(x === ch)); });
+      render(true);
+    });
+  });
+  function choose(k) {
+    pick = k; all = false;
+    Array.prototype.forEach.call(chips, function (x) { x.setAttribute('aria-pressed', String(x.getAttribute('data-f') === k)); });
+    render(true);
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-pick]'), function (a) { a.addEventListener('click', function () { choose(a.getAttribute('data-pick')); }); });
+  more.addEventListener('click', function () { all = true; render(true); sweep(); });
+  render(false);
+
+  // floating order button: hidden over the film and the order section, shown everywhere else
+  var waFloat = document.getElementById('waFloat');
+  var stageEl = document.getElementById('stage');
+  var orderSec = document.getElementById('order');
+  var overStage = true, overOrder = false;
+  function syncFloat() { waFloat.classList.toggle('show', !overStage && !overOrder); }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) { overStage = es[0].isIntersecting; syncFloat(); }, { threshold: 0.35 }).observe(stageEl);
+    new IntersectionObserver(function (es) { overOrder = es[0].isIntersecting; syncFloat(); }, { threshold: 0.2 }).observe(orderSec);
+  } else { waFloat.classList.add('show'); }
+
+  // range cards: each crossfades through its sarees while on screen; the silk card plays its film
+  Array.prototype.forEach.call(document.querySelectorAll('.rc'), function (card, n) {
+    var imgs = card.querySelectorAll('.rc-img');
+    var vid = card.querySelector('.rc-vid');
+    var i = 0, timer = null;
+    function step() { imgs[i].classList.remove('on'); i = (i + 1) % imgs.length; imgs[i].classList.add('on'); }
+    function on() {
+      if (reduce) return;
+      if (vid) { var p = vid.play(); if (p && p.catch) p.catch(function () {}); }
+      else if (imgs.length > 1 && !timer) timer = setInterval(step, 3800 + n * 350);
+    }
+    function off() { if (vid) vid.pause(); clearInterval(timer); timer = null; }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { es.forEach(function (e) { e.isIntersecting ? on() : off(); }); }, { threshold: 0.15 }).observe(card);
+    } else { on(); }
+    document.addEventListener('visibilitychange', function () { if (document.hidden) off(); });
+  });
+
+  // entrances: the parts of each section rise in turn; a position check means nothing stays hidden
+  var groups = new Map();
+  var els = Array.prototype.slice.call(document.querySelectorAll('[data-rise]'));
+  els.forEach(function (el) {
+    var sec = el.closest('section, footer') || document.body;
+    var n = groups.get(sec) || 0; el.style.setProperty('--d', n); groups.set(sec, n + 1);
+  });
+  cards.forEach(function (c, i) { c.style.setProperty('--d', i % 4); });
+  var pending = els.concat(cards);
+  function sweep() {
+    var h = window.innerHeight;
+    pending = pending.filter(function (el) {
+      if (el.hidden) return true;
+      var r = el.getBoundingClientRect();
+      if (reduce || r.top < h * 0.92) { el.classList.add('in'); return false; }
+      return true;
+    });
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(function () { ticking = false; sweep(); }); } }, { passive: true });
+  window.addEventListener('resize', sweep);
+  sweep();
+})();
+/* PAGE-JS:END */
+</script>
+</body>
+</html>
